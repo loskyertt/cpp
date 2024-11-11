@@ -3,11 +3,11 @@
 #include <vector>
 using namespace std;
 
-// 定义作业结构体
+// 作业结构体
 struct Job {
     int id; // 作业编号
-    int t1; // 在机器1上的处理时间
-    int t2; // 在机器2上的处理时间
+    int t1; // 机器1上的处理时间
+    int t2; // 机器2上的处理时间
 };
 
 // 比较函数，用于排序作业

@@ -5,7 +5,7 @@ using namespace std;
 // 0-1背包问题动态规划实现
 int knapsack(int W, const vector<int>& weights, const vector<int>& values, int n)
 {
-    // 创建二维DP数组
+    // 二维DP数组
     vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));
 
     // 填充DP表
