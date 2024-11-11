@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法作业/符号三角/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法作业/符号三角/include  -o CMakeFiles/test.dir/main.cpp.o -c /home/sky/workspace/cpp/GIS算法作业/符号三角/main.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法作业/符号三角/main.cpp",
+  "output": "CMakeFiles/test.dir/main.cpp.o"
+}
+]
