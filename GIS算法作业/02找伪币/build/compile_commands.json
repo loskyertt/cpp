@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法作业/02找伪币/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法作业/02找伪币/include  -o CMakeFiles/test.out.dir/src/findFakeCoin.cpp.o -c /home/sky/workspace/cpp/GIS算法作业/02找伪币/src/findFakeCoin.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法作业/02找伪币/src/findFakeCoin.cpp",
+  "output": "CMakeFiles/test.out.dir/src/findFakeCoin.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法作业/02找伪币/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法作业/02找伪币/include  -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/GIS算法作业/02找伪币/main.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法作业/02找伪币/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]

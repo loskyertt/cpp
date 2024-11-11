@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/include  -o CMakeFiles/test.out.dir/src/frogJump.cpp.o -c /home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/src/frogJump.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/src/frogJump.cpp",
+  "output": "CMakeFiles/test.out.dir/src/frogJump.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/include  -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/main.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]
