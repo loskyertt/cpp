@@ -1,0 +1,1 @@
+/usr/sbin/c++ -Wl,--dependency-file,CMakeFiles/test.out.dir/link.d CMakeFiles/test.out.dir/src/tree.cpp.o CMakeFiles/test.out.dir/main.cpp.o -o test.out

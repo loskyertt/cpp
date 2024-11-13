@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/回溯/01回溯算法/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/回溯/01回溯算法/include  -o CMakeFiles/test.out.dir/src/tree.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/01回溯算法/src/tree.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/回溯/01回溯算法/src/tree.cpp",
+  "output": "CMakeFiles/test.out.dir/src/tree.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/回溯/01回溯算法/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/回溯/01回溯算法/include  -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/01回溯算法/main.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/回溯/01回溯算法/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]
