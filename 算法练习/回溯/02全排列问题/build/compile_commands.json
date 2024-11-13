@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/build",
-  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include  -o CMakeFiles/test.out.dir/src/permutations.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include -g -o CMakeFiles/test.out.dir/src/permutations.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp",
   "file": "/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp",
   "output": "CMakeFiles/test.out.dir/src/permutations.cpp.o"
 },
 {
   "directory": "/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/build",
-  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include  -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp",
   "file": "/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp",
   "output": "CMakeFiles/test.out.dir/main.cpp.o"
 }

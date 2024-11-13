@@ -1,4 +1,4 @@
-CMakeFiles/test.dir/main.cpp.o: \
+CMakeFiles/test.out.dir/main.cpp.o: \
  /home/sky/workspace/cpp/test_cmake/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/14.2.1/iostream \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \

@@ -1,14 +1,14 @@
 [
 {
   "directory": "/home/sky/workspace/cpp/test_cmake/build",
-  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/test_cmake/include  -o CMakeFiles/test.dir/src/add.cpp.o -c /home/sky/workspace/cpp/test_cmake/src/add.cpp",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/test_cmake/include -g -o CMakeFiles/test.out.dir/src/add.cpp.o -c /home/sky/workspace/cpp/test_cmake/src/add.cpp",
   "file": "/home/sky/workspace/cpp/test_cmake/src/add.cpp",
-  "output": "CMakeFiles/test.dir/src/add.cpp.o"
+  "output": "CMakeFiles/test.out.dir/src/add.cpp.o"
 },
 {
   "directory": "/home/sky/workspace/cpp/test_cmake/build",
-  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/test_cmake/include  -o CMakeFiles/test.dir/main.cpp.o -c /home/sky/workspace/cpp/test_cmake/main.cpp",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/test_cmake/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/test_cmake/main.cpp",
   "file": "/home/sky/workspace/cpp/test_cmake/main.cpp",
-  "output": "CMakeFiles/test.dir/main.cpp.o"
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
 }
 ]

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 
