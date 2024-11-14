@@ -4,7 +4,7 @@
 # compile CXX with /usr/sbin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/include
+CXX_INCLUDES = -I/home/sky/workspace/cpp/GIS算法作业/01青蛙跳台阶/include
 
 CXX_FLAGS = 
 

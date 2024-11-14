@@ -76,29 +76,29 @@ CMakeFiles/test.out.dir/src/permutations.cpp.o: CMakeFiles/test.out.dir/flags.ma
 CMakeFiles/test.out.dir/src/permutations.cpp.o: /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp
 CMakeFiles/test.out.dir/src/permutations.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.out.dir/src/permutations.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/permutations.cpp.o -MF CMakeFiles/test.out.dir/src/permutations.cpp.o.d -o CMakeFiles/test.out.dir/src/permutations.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp
+	/usr/sbin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/permutations.cpp.o -MF CMakeFiles/test.out.dir/src/permutations.cpp.o.d -o CMakeFiles/test.out.dir/src/permutations.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp
 
 CMakeFiles/test.out.dir/src/permutations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.out.dir/src/permutations.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp > CMakeFiles/test.out.dir/src/permutations.cpp.i
+	/usr/sbin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp > CMakeFiles/test.out.dir/src/permutations.cpp.i
 
 CMakeFiles/test.out.dir/src/permutations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.out.dir/src/permutations.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp -o CMakeFiles/test.out.dir/src/permutations.cpp.s
+	/usr/sbin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp -o CMakeFiles/test.out.dir/src/permutations.cpp.s
 
 CMakeFiles/test.out.dir/main.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/main.cpp.o: /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp
 CMakeFiles/test.out.dir/main.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sky/workspace/cpp/算法练习/回溯/02全排列问题/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.out.dir/main.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/main.cpp.o -MF CMakeFiles/test.out.dir/main.cpp.o.d -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp
+	/usr/sbin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/main.cpp.o -MF CMakeFiles/test.out.dir/main.cpp.o.d -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp
 
 CMakeFiles/test.out.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.out.dir/main.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp > CMakeFiles/test.out.dir/main.cpp.i
+	/usr/sbin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp > CMakeFiles/test.out.dir/main.cpp.i
 
 CMakeFiles/test.out.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.out.dir/main.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp -o CMakeFiles/test.out.dir/main.cpp.s
+	/usr/sbin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp -o CMakeFiles/test.out.dir/main.cpp.s
 
 # Object files for target test.out
 test_out_OBJECTS = \

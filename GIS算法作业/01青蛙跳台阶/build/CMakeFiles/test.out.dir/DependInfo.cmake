@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/main.cpp" "CMakeFiles/test.out.dir/main.cpp.o" "gcc" "CMakeFiles/test.out.dir/main.cpp.o.d"
-  "/home/sky/workspace/cpp/GIS算法作业/青蛙跳台阶/src/frogJump.cpp" "CMakeFiles/test.out.dir/src/frogJump.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/frogJump.cpp.o.d"
+  "/home/sky/workspace/cpp/GIS算法作业/01青蛙跳台阶/main.cpp" "CMakeFiles/test.out.dir/main.cpp.o" "gcc" "CMakeFiles/test.out.dir/main.cpp.o.d"
+  "/home/sky/workspace/cpp/GIS算法作业/01青蛙跳台阶/src/frogJump.cpp" "CMakeFiles/test.out.dir/src/frogJump.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/frogJump.cpp.o.d"
   "" "test.out" "gcc" "CMakeFiles/test.out.dir/link.d"
   )
 

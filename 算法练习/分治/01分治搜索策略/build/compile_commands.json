@@ -1,13 +1,13 @@
 [
 {
   "directory": "/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/build",
-  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/include  -o CMakeFiles/test.out.dir/src/binarySearch.cpp.o -c /home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/src/binarySearch.cpp",
+  "command": "/usr/sbin/clang++  -I/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/include -g -o CMakeFiles/test.out.dir/src/binarySearch.cpp.o -c /home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/src/binarySearch.cpp",
   "file": "/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/src/binarySearch.cpp",
   "output": "CMakeFiles/test.out.dir/src/binarySearch.cpp.o"
 },
 {
   "directory": "/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/build",
-  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/include  -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/main.cpp",
+  "command": "/usr/sbin/clang++  -I/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/main.cpp",
   "file": "/home/sky/workspace/cpp/算法练习/分治/01分治搜索策略/main.cpp",
   "output": "CMakeFiles/test.out.dir/main.cpp.o"
 }

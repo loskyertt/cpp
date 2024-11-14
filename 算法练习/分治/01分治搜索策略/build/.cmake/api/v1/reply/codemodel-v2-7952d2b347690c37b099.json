@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "01\u5206\u6cbb\u641c\u7d22\u7b56\u7565",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "test.out::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test.out-Debug-f83d5a72a357592d6d18.json",
+					"name" : "test.out",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sky/workspace/cpp/\u7b97\u6cd5\u7ec3\u4e60/\u5206\u6cbb/01\u5206\u6cbb\u641c\u7d22\u7b56\u7565/build",
+		"source" : "/home/sky/workspace/cpp/\u7b97\u6cd5\u7ec3\u4e60/\u5206\u6cbb/01\u5206\u6cbb\u641c\u7d22\u7b56\u7565"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

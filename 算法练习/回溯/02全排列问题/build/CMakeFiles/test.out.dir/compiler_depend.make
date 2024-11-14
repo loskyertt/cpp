@@ -25,7 +25,9 @@ CMakeFiles/test.out.dir/main.cpp.o: /home/sky/workspace/cpp/算法练习/回溯/
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -66,6 +68,37 @@ CMakeFiles/test.out.dir/main.cpp.o: /home/sky/workspace/cpp/算法练习/回溯/
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib/clang/18/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/clang/18/include/__stddef_max_align_t.h \
+  /usr/lib/clang/18/include/__stddef_null.h \
+  /usr/lib/clang/18/include/__stddef_nullptr_t.h \
+  /usr/lib/clang/18/include/__stddef_offsetof.h \
+  /usr/lib/clang/18/include/__stddef_ptrdiff_t.h \
+  /usr/lib/clang/18/include/__stddef_size_t.h \
+  /usr/lib/clang/18/include/__stddef_wchar_t.h \
+  /usr/lib/clang/18/include/stdarg.h \
+  /usr/lib/clang/18/include/stddef.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
   /usr/include/c++/14.2.1/bits/alloc_traits.h \
@@ -171,36 +204,27 @@ CMakeFiles/test.out.dir/main.cpp.o: /home/sky/workspace/cpp/算法练习/回溯/
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /usr/include/ctype.h \
-  /usr/include/endian.h \
-  /usr/include/errno.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/gnu/stubs-64.h \
-  /usr/include/gnu/stubs.h \
-  /usr/include/linux/errno.h \
-  /usr/include/locale.h \
-  /usr/include/pthread.h \
-  /usr/include/sched.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/sys/cdefs.h \
-  /usr/include/sys/select.h \
-  /usr/include/sys/single_threaded.h \
-  /usr/include/sys/types.h \
-  /usr/include/time.h \
-  /usr/include/wchar.h \
-  /usr/include/wctype.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h
+  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h
 
 CMakeFiles/test.out.dir/src/permutations.cpp.o: /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp \
   /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include/permutations.hpp \
   /usr/include/bits/long-double.h \
   /usr/include/bits/timesize.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/sys/cdefs.h \
+  /usr/lib/clang/18/include/__stddef_max_align_t.h \
+  /usr/lib/clang/18/include/__stddef_null.h \
+  /usr/lib/clang/18/include/__stddef_nullptr_t.h \
+  /usr/lib/clang/18/include/__stddef_offsetof.h \
+  /usr/lib/clang/18/include/__stddef_ptrdiff_t.h \
+  /usr/lib/clang/18/include/__stddef_size_t.h \
+  /usr/lib/clang/18/include/__stddef_wchar_t.h \
+  /usr/lib/clang/18/include/stddef.h \
   /usr/include/c++/14.2.1/backward/binders.h \
   /usr/include/c++/14.2.1/bit \
   /usr/include/c++/14.2.1/bits/alloc_traits.h \
@@ -253,50 +277,19 @@ CMakeFiles/test.out.dir/src/permutations.cpp.o: /home/sky/workspace/cpp/算法�
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
-  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/gnu/stubs-64.h \
-  /usr/include/gnu/stubs.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h
+  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h
 
-test.out: /usr/lib/libc.so \
-  /usr/lib/libgcc_s.so \
-  /usr/lib/libm.so \
-  /usr/lib/ld-linux-x86-64.so.2
+test.out: /usr/lib/ld-linux-x86-64.so.2 \
+  /usr/lib64/libc.so \
+  /usr/lib64/libgcc_s.so \
+  /usr/lib64/libm.so
 
 
-/usr/lib/libm.so:
+/usr/lib64/libgcc_s.so:
 
-/usr/lib/libc.so:
+/usr/lib64/libc.so:
 
 /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/src/permutations.cpp:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h:
-
-/usr/include/time.h:
-
-/usr/include/sys/select.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/stdio.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/sched.h:
-
-/usr/include/locale.h:
-
-/usr/include/gnu/stubs-64.h:
-
-/usr/include/errno.h:
-
-/usr/include/endian.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
@@ -304,25 +297,19 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
+/usr/lib64/libm.so:
+
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
-/usr/include/wchar.h:
-
-/usr/include/c++/14.2.1/vector:
-
 /usr/include/c++/14.2.1/type_traits:
 
 /usr/include/c++/14.2.1/tuple:
 
 /usr/include/c++/14.2.1/pstl/pstl_config.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/c++/14.2.1/ostream:
 
 /usr/include/c++/14.2.1/istream:
 
@@ -342,10 +329,6 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/c++/14.2.1/debug/debug.h:
 
-/usr/include/pthread.h:
-
-/usr/include/c++/14.2.1/debug/assertions.h:
-
 /usr/include/c++/14.2.1/cwctype:
 
 /usr/include/c++/14.2.1/cwchar:
@@ -357,6 +340,52 @@ test.out: /usr/lib/libc.so \
 /usr/include/c++/14.2.1/clocale:
 
 /usr/include/c++/14.2.1/cerrno:
+
+/usr/include/c++/14.2.1/cctype:
+
+/usr/include/c++/14.2.1/bits/utility.h:
+
+/usr/include/c++/14.2.1/bits/uses_allocator.h:
+
+/usr/include/c++/14.2.1/bits/stringfwd.h:
+
+/usr/include/c++/14.2.1/bits/string_view.tcc:
+
+/usr/include/c++/14.2.1/bits/streambuf_iterator.h:
+
+/usr/include/c++/14.2.1/bits/streambuf.tcc:
+
+/usr/include/c++/14.2.1/bits/stl_vector.h:
+
+/usr/include/c++/14.2.1/bits/stl_pair.h:
+
+/usr/include/c++/14.2.1/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/14.2.1/bits/stl_iterator.h:
+
+/usr/include/c++/14.2.1/bits/stl_bvector.h:
+
+/usr/include/c++/14.2.1/bits/stl_algobase.h:
+
+/usr/include/c++/14.2.1/bits/std_abs.h:
+
+/usr/include/c++/14.2.1/bits/refwrap.h:
+
+/usr/include/c++/14.2.1/bits/stl_function.h:
+
+/usr/include/c++/14.2.1/bits/range_access.h:
+
+/usr/include/c++/14.2.1/system_error:
+
+/usr/include/c++/14.2.1/bits/ptr_traits.h:
+
+/usr/include/c++/14.2.1/bits/postypes.h:
+
+/usr/include/c++/14.2.1/bits/ostream_insert.h:
+
+/usr/include/c++/14.2.1/bits/ostream.tcc:
+
+/usr/include/c++/14.2.1/bits/nested_exception.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
@@ -370,31 +399,29 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/bits/types/struct_timespec.h:
 
-/usr/include/c++/14.2.1/bits/refwrap.h:
-
 /usr/include/bits/types/struct_sched_param.h:
-
-/usr/include/ctype.h:
-
-/usr/include/bits/waitflags.h:
 
 /usr/include/c++/14.2.1/initializer_list:
 
 /usr/include/bits/types/struct_FILE.h:
 
-/usr/include/c++/14.2.1/bits/stl_iterator.h:
-
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
 /usr/include/bits/types/locale_t.h:
 
-/usr/include/bits/typesizes.h:
+/usr/lib/clang/18/include/__stddef_nullptr_t.h:
 
-/usr/include/bits/cpu-set.h:
+/usr/include/c++/14.2.1/bits/stl_construct.h:
 
-/usr/include/c++/14.2.1/bits/functexcept.h:
+/usr/include/c++/14.2.1/bits/cxxabi_forced.h:
+
+/usr/include/c++/14.2.1/bits/stl_uninitialized.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/bits/sched.h:
+
+/usr/include/endian.h:
 
 /usr/include/c++/14.2.1/bits/ios_base.h:
 
@@ -404,9 +431,11 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/c++/14.2.1/bits/streambuf.tcc:
+/usr/include/errno.h:
 
 /usr/include/bits/types/__locale_t.h:
+
+/usr/include/sched.h:
 
 /usr/include/c++/14.2.1/ext/atomicity.h:
 
@@ -417,6 +446,8 @@ test.out: /usr/lib/libc.so \
 /usr/include/c++/14.2.1/bits/exception.h:
 
 /usr/include/bits/types/FILE.h:
+
+/usr/lib/clang/18/include/__stddef_ptrdiff_t.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
 
@@ -434,13 +465,21 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/bits/endian.h:
 
+/usr/include/bits/thread-shared-types.h:
+
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/bits/time64.h:
 
-/usr/include/c++/14.2.1/bits/basic_ios.tcc:
+/usr/include/c++/14.2.1/bits/predefined_ops.h:
 
-/usr/include/c++/14.2.1/bits/postypes.h:
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/time.h:
+
+/usr/lib/clang/18/include/__stddef_offsetof.h:
 
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
@@ -478,13 +517,25 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/c++/14.2.1/backward/binders.h:
 
+/usr/include/stdio.h:
+
 /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/include/permutations.hpp:
+
+/usr/include/c++/14.2.1/bits/new_allocator.h:
+
+/usr/include/sys/single_threaded.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
-/usr/lib/libgcc_s.so:
+/usr/include/c++/14.2.1/bits/uses_allocator_args.h:
+
+/usr/include/bits/select.h:
 
 /usr/include/c++/14.2.1/bits/alloc_traits.h:
+
+/usr/include/bits/cpu-set.h:
+
+/usr/include/c++/14.2.1/bits/functexcept.h:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -494,47 +545,37 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/bits/floatn-common.h:
 
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/c++/14.2.1/bits/ostream.tcc:
-
-/usr/include/features.h:
-
-/usr/include/bits/endianness.h:
-
 /usr/include/bits/long-double.h:
 
+/usr/include/gnu/stubs-64.h:
+
+/usr/lib/clang/18/include/stdarg.h:
+
 /usr/include/bits/libc-header-start.h:
-
-/usr/include/c++/14.2.1/bits/stl_pair.h:
-
-/usr/include/wctype.h:
-
-/usr/include/bits/errno.h:
-
-/usr/include/bits/timex.h:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/c++/14.2.1/bits/locale_classes.tcc:
 
-/usr/include/c++/14.2.1/bits/cxxabi_forced.h:
+/usr/include/stdc-predef.h:
 
-/usr/include/c++/14.2.1/bits/stl_construct.h:
+/usr/include/bits/stdio.h:
 
-/usr/include/gnu/stubs.h:
+/usr/include/bits/types/sigset_t.h:
 
-/usr/include/bits/pthreadtypes-arch.h:
+/usr/include/c++/14.2.1/cstddef:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/c++/14.2.1/bits/vector.tcc:
+
+/usr/include/bits/stdlib-bsearch.h:
+
+/usr/include/time.h:
+
+/usr/include/locale.h:
 
 /usr/include/bits/timesize.h:
 
 /usr/include/bits/waitstatus.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/c++/14.2.1/bits/uses_allocator_args.h:
 
 /usr/include/sys/types.h:
 
@@ -544,7 +585,77 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/bits/wordsize.h:
 
+/usr/include/bits/waitflags.h:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/14.2.1/ostream:
+
+/usr/include/features-time64.h:
+
+/usr/include/bits/endianness.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/c++/14.2.1/string:
+
+/usr/include/c++/14.2.1/bits/move.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/c++/14.2.1/debug/assertions.h:
+
+/usr/include/pthread.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/c++/14.2.1/bits/hash_bytes.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/bits/timex.h:
+
+/usr/include/wctype.h:
+
+/usr/lib/clang/18/include/__stddef_max_align_t.h:
+
+/usr/include/c++/14.2.1/bits/exception_defines.h:
+
+/usr/include/c++/14.2.1/vector:
+
+/usr/include/wchar.h:
+
+/usr/lib/clang/18/include/__stddef_size_t.h:
+
+/usr/include/c++/14.2.1/bits/basic_ios.tcc:
+
+/usr/lib/clang/18/include/__stddef_wchar_t.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/c++/14.2.1/bits/locale_facets.tcc:
+
+/usr/include/bits/typesizes.h:
+
+/usr/lib/clang/18/include/stddef.h:
+
+/usr/include/c++/14.2.1/bits/requires_hosted.h:
+
+/usr/include/c++/14.2.1/bits/memoryfwd.h:
+
+/usr/include/c++/14.2.1/bit:
+
 /usr/include/bits/types/wint_t.h:
+
+/usr/lib/clang/18/include/__stdarg___gnuc_va_list.h:
 
 /usr/include/c++/14.2.1/bits/basic_ios.h:
 
@@ -553,6 +664,12 @@ test.out: /usr/lib/libc.so \
 /home/sky/workspace/cpp/算法练习/回溯/02全排列问题/main.cpp:
 
 /usr/include/c++/14.2.1/bits/localefwd.h:
+
+/usr/include/c++/14.2.1/bits/stl_iterator_base_funcs.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/c++/14.2.1/bits/basic_string.h:
 
 /usr/include/c++/14.2.1/bits/exception_ptr.h:
 
@@ -568,9 +685,9 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/c++/14.2.1/bits/locale_classes.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h:
-
 /usr/include/c++/14.2.1/iostream:
+
+/usr/lib/clang/18/include/__stddef_null.h:
 
 /usr/include/c++/14.2.1/bits/memory_resource.h:
 
@@ -580,88 +697,8 @@ test.out: /usr/lib/libc.so \
 
 /usr/include/c++/14.2.1/bits/cxxabi_init_exception.h:
 
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/time.h:
-
-/usr/include/c++/14.2.1/bits/predefined_ops.h:
-
-/usr/include/c++/14.2.1/bits/exception_defines.h:
-
-/usr/include/c++/14.2.1/bits/stl_function.h:
-
-/usr/include/c++/14.2.1/bits/range_access.h:
-
 /usr/include/c++/14.2.1/bits/functional_hash.h:
-
-/usr/include/c++/14.2.1/bits/hash_bytes.h:
 
 /usr/include/c++/14.2.1/bits/invoke.h:
 
 /usr/include/c++/14.2.1/bits/istream.tcc:
-
-/usr/include/asm/errno.h:
-
-/usr/include/c++/14.2.1/bits/locale_facets.tcc:
-
-/usr/include/c++/14.2.1/bits/stl_iterator_base_types.h:
-
-/usr/include/linux/errno.h:
-
-/usr/include/c++/14.2.1/string:
-
-/usr/include/c++/14.2.1/bits/move.h:
-
-/usr/include/c++/14.2.1/bits/nested_exception.h:
-
-/usr/include/sys/single_threaded.h:
-
-/usr/include/c++/14.2.1/bits/new_allocator.h:
-
-/usr/include/c++/14.2.1/bits/ostream_insert.h:
-
-/usr/include/c++/14.2.1/system_error:
-
-/usr/include/c++/14.2.1/bits/ptr_traits.h:
-
-/usr/include/c++/14.2.1/bit:
-
-/usr/include/c++/14.2.1/bits/memoryfwd.h:
-
-/usr/include/c++/14.2.1/bits/requires_hosted.h:
-
-/usr/include/c++/14.2.1/bits/std_abs.h:
-
-/usr/include/c++/14.2.1/bits/stl_algobase.h:
-
-/usr/include/c++/14.2.1/bits/streambuf_iterator.h:
-
-/usr/include/c++/14.2.1/bits/string_view.tcc:
-
-/usr/include/c++/14.2.1/bits/stl_bvector.h:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/c++/14.2.1/bits/basic_string.h:
-
-/usr/include/c++/14.2.1/bits/stl_iterator_base_funcs.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/c++/14.2.1/bits/stl_uninitialized.h:
-
-/usr/include/c++/14.2.1/bits/stl_vector.h:
-
-/usr/include/c++/14.2.1/bits/uses_allocator.h:
-
-/usr/include/c++/14.2.1/bits/stringfwd.h:
-
-/usr/include/c++/14.2.1/bits/utility.h:
-
-/usr/include/c++/14.2.1/cstddef:
-
-/usr/include/c++/14.2.1/bits/vector.tcc:
-
-/usr/include/c++/14.2.1/cctype:

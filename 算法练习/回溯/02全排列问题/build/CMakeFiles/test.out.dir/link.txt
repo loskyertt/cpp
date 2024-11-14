@@ -1,1 +1,1 @@
-/usr/sbin/c++ -g -Wl,--dependency-file,CMakeFiles/test.out.dir/link.d CMakeFiles/test.out.dir/src/permutations.cpp.o CMakeFiles/test.out.dir/main.cpp.o -o test.out
+/usr/sbin/clang++ -g -Xlinker --dependency-file -Xlinker CMakeFiles/test.out.dir/link.d CMakeFiles/test.out.dir/src/permutations.cpp.o CMakeFiles/test.out.dir/main.cpp.o -o test.out
