@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/include -g -o CMakeFiles/test.out.dir/src/generateSubsets.cpp.o -c /home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/src/generateSubsets.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/src/generateSubsets.cpp",
+  "output": "CMakeFiles/test.out.dir/src/generateSubsets.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/main.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/04生成子集/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]

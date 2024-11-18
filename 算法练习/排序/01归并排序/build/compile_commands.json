@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/排序/01归并排序/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/排序/01归并排序/include -g -o CMakeFiles/test.out.dir/src/merge_sort.cpp.o -c /home/sky/workspace/cpp/算法练习/排序/01归并排序/src/merge_sort.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/排序/01归并排序/src/merge_sort.cpp",
+  "output": "CMakeFiles/test.out.dir/src/merge_sort.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/排序/01归并排序/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/排序/01归并排序/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/排序/01归并排序/main.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/排序/01归并排序/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]

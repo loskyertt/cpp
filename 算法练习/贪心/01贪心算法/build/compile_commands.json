@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/贪心/01贪心算法/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/贪心/01贪心算法/include -g -o CMakeFiles/test.out.dir/src/greedy.cpp.o -c /home/sky/workspace/cpp/算法练习/贪心/01贪心算法/src/greedy.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/贪心/01贪心算法/src/greedy.cpp",
+  "output": "CMakeFiles/test.out.dir/src/greedy.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/贪心/01贪心算法/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/贪心/01贪心算法/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/贪心/01贪心算法/main.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/贪心/01贪心算法/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]

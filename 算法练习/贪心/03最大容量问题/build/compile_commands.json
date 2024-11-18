@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/include -g -o CMakeFiles/test.out.dir/src/max_capacity.cpp.o -c /home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/src/max_capacity.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/src/max_capacity.cpp",
+  "output": "CMakeFiles/test.out.dir/src/max_capacity.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/main.cpp",
+  "file": "/home/sky/workspace/cpp/算法练习/贪心/03最大容量问题/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]

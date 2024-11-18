@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/思考拓展/01递归理解/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/思考拓展/01递归理解/include -g -o CMakeFiles/test.out.dir/src/fib.cpp.o -c /home/sky/workspace/cpp/思考拓展/01递归理解/src/fib.cpp",
+  "file": "/home/sky/workspace/cpp/思考拓展/01递归理解/src/fib.cpp",
+  "output": "CMakeFiles/test.out.dir/src/fib.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/思考拓展/01递归理解/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/思考拓展/01递归理解/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/思考拓展/01递归理解/main.cpp",
+  "file": "/home/sky/workspace/cpp/思考拓展/01递归理解/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]
