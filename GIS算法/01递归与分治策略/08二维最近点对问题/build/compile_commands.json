@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/include -g -o CMakeFiles/test.out.dir/src/point.cpp.o -c /home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/src/point.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/src/point.cpp",
+  "output": "CMakeFiles/test.out.dir/src/point.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/build",
+  "command": "/usr/sbin/c++  -I/home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/main.cpp",
+  "file": "/home/sky/workspace/cpp/GIS算法/01递归与分治策略/08二维最近点对问题/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]
