@@ -13,7 +13,11 @@ int main()
 
     int sw = find(id, id.size());
 
-    cout << "水王的 id 是：" << sw << endl;
+    if (sw != -1) {
+        cout << "水王的 id 是：" << sw << endl;
+    } else {
+        cout << "没有水王。" << endl;
+    }
 
     return 0;
 }
