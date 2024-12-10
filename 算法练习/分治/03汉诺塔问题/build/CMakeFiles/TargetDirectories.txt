@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/算法练习/分治/03汉诺塔问题/build/CMakeFiles/test.out.dir
-/home/sky/workspace/cpp/算法练习/分治/03汉诺塔问题/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/算法练习/分治/03汉诺塔问题/build/CMakeFiles/rebuild_cache.dir

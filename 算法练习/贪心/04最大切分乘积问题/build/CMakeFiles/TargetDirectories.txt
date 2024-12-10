@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/算法练习/贪心/04最大切分乘积问题/build/CMakeFiles/test.out.dir
-/home/sky/workspace/cpp/算法练习/贪心/04最大切分乘积问题/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/算法练习/贪心/04最大切分乘积问题/build/CMakeFiles/rebuild_cache.dir

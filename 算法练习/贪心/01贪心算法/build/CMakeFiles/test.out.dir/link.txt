@@ -1,1 +1,0 @@
-/usr/sbin/c++ -g -Wl,--dependency-file,CMakeFiles/test.out.dir/link.d CMakeFiles/test.out.dir/src/greedy.cpp.o CMakeFiles/test.out.dir/main.cpp.o -o test.out

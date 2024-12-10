@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sky/workspace/cpp/基础算法练习/01两数之和/build",
+  "command": "/usr/sbin/c++ -I/home/sky/workspace/cpp/基础算法练习/01两数之和/include -g -o CMakeFiles/test.out.dir/src/solution.cpp.o -c /home/sky/workspace/cpp/基础算法练习/01两数之和/src/solution.cpp",
+  "file": "/home/sky/workspace/cpp/基础算法练习/01两数之和/src/solution.cpp",
+  "output": "CMakeFiles/test.out.dir/src/solution.cpp.o"
+},
+{
+  "directory": "/home/sky/workspace/cpp/基础算法练习/01两数之和/build",
+  "command": "/usr/sbin/c++ -I/home/sky/workspace/cpp/基础算法练习/01两数之和/include -g -o CMakeFiles/test.out.dir/main.cpp.o -c /home/sky/workspace/cpp/基础算法练习/01两数之和/main.cpp",
+  "file": "/home/sky/workspace/cpp/基础算法练习/01两数之和/main.cpp",
+  "output": "CMakeFiles/test.out.dir/main.cpp.o"
+}
+]

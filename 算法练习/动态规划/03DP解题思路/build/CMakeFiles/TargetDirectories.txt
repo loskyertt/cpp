@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/算法练习/动态规划/03DP解题思路/build/CMakeFiles/test.out.dir
-/home/sky/workspace/cpp/算法练习/动态规划/03DP解题思路/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/算法练习/动态规划/03DP解题思路/build/CMakeFiles/rebuild_cache.dir

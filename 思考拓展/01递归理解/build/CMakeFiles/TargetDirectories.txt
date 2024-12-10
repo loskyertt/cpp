@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/思考拓展/01递归理解/build/CMakeFiles/test.out.dir
-/home/sky/workspace/cpp/思考拓展/01递归理解/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/思考拓展/01递归理解/build/CMakeFiles/rebuild_cache.dir
