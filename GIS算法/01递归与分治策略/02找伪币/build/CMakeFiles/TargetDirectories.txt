@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/GIS算法作业/02找伪币/build/CMakeFiles/test.out.dir
-/home/sky/workspace/cpp/GIS算法作业/02找伪币/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/GIS算法作业/02找伪币/build/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/GIS算法作业/符号三角/build/CMakeFiles/test.dir
-/home/sky/workspace/cpp/GIS算法作业/符号三角/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/GIS算法作业/符号三角/build/CMakeFiles/rebuild_cache.dir

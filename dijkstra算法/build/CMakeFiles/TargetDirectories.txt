@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/dijkstra算法/build/CMakeFiles/test.dir
-/home/sky/workspace/cpp/dijkstra算法/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/dijkstra算法/build/CMakeFiles/rebuild_cache.dir

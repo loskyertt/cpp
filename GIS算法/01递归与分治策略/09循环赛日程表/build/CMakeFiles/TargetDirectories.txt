@@ -1,3 +1,0 @@
-/home/sky/workspace/cpp/GIS算法/01递归与分治策略/09循环赛日程表/build/CMakeFiles/test.out.dir
-/home/sky/workspace/cpp/GIS算法/01递归与分治策略/09循环赛日程表/build/CMakeFiles/edit_cache.dir
-/home/sky/workspace/cpp/GIS算法/01递归与分治策略/09循环赛日程表/build/CMakeFiles/rebuild_cache.dir
