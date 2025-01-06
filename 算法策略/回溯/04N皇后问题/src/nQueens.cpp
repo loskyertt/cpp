@@ -2,8 +2,7 @@
 #include <string>
 #include <vector>
 
-void backtrack(int row, int n, vector<vector<string>>& state, vector<vector<vector<string>>>& res, vector<bool>& cols,
-    vector<bool>& diags1, vector<bool>& diags2)
+void backtrack(int row, int n, vector<vector<string>>& state, vector<vector<vector<string>>>& res, vector<bool>& cols, vector<bool>& diags1, vector<bool>& diags2)
 {
     // 当放置完所有行时，记录解
     if (row == n) {

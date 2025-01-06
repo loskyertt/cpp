@@ -1,8 +1,7 @@
 #include "permutations.hpp"
 #include <iostream>
 
-// 测试函数
-int main()
+void test01()
 {
     vector<int> nums = { 1, 2, 3 }; // 输入数据
     vector<vector<int>> result = permutations(nums);
@@ -14,6 +13,13 @@ int main()
         }
         cout << endl;
     }
+}
+
+// 测试函数
+int main()
+{
+    test01();
+    // test02();
 
     return 0;
 }
