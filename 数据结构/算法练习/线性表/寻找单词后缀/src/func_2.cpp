@@ -19,8 +19,8 @@ ListNode *merge_suffix(ListNode *head1, ListNode *head2) {
     len2--;
   }
 
-  // print_list(head1);
-  // print_list(head2);
+  print_list(head1);
+  print_list(head2);
 
   // 找到公共后缀
   while (head1 && head2 && head1->letter != head2->letter) {

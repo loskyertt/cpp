@@ -23,7 +23,7 @@ void share_suffix(string word1, string word2, ListNode *head1, ListNode *head2) 
     j--;
   }
 
-  // 定义共同后缀的起始点，比如这里是字母 i 作为后缀其实点
+  // 定义共同后缀的起始点，比如这里是字母 i 作为后缀起始点
   ListNode *suffix_start = new ListNode(word1[i]);
   // 把后缀转成链表
   ListNode *curr_suffix = suffix_start;
