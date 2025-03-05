@@ -20,16 +20,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ## ------------------------------------------ files-settings ----------------------------------------------
 # 添加源文件
-file(GLOB SRC_DIR
-    "src/*.cpp"
-    "main.cpp"
-)
-
 
 add_executable(test
-    ${SRC_DIR}
+    main.cpp
 )
 
-target_include_directories(test PUBLIC
-    include
-)
+# target_include_directories(test PUBLIC
+#     include
+# )
