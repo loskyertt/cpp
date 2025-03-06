@@ -45,7 +45,13 @@ void print_list(const ListNode *head) {
   cout << endl;
 }
 
-void test_list() {
+void change_ListNode(ListNode *head) {
+  head->next = new ListNode(11);
+  head->next->next = new ListNode(12);
+  head->next->next->next = new ListNode(13);
+}
+
+void test_01() {
   /* 初始化链表 1 -> 3 -> 2 -> 5 -> 4 */
   // 初始化各个节点
   ListNode *n0 = new ListNode(1);
@@ -78,9 +84,34 @@ void test_list() {
   print_list(n0);
 }
 
+void test_02() {
+  /* 初始化链表 1 -> 3 -> 2 -> 5 -> 4 */
+  // 初始化各个节点
+  ListNode *n0 = new ListNode(1);
+  ListNode *n1 = new ListNode(3);
+  ListNode *n2 = new ListNode(2);
+  ListNode *n3 = new ListNode(5);
+  ListNode *n4 = new ListNode(4);
+  // 构建节点之间的引用
+  n0->next = n1;
+  n1->next = n2;
+  n2->next = n3;
+  n3->next = n4;
+
+  // 初始链表
+  cout << "初始链表：" << endl;
+  print_list(n0);
+
+  // 修改过后的
+  cout << "修改过后的：" << endl;
+  change_ListNode(n0);
+  print_list(n0);
+}
+
 int main() {
 
-  test_list();
+  // test_01();
+  test_02();
 
   return 0;
 }
