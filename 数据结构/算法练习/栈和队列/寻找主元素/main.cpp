@@ -66,14 +66,18 @@ int find_main_element_count_sort(vector<int> A) {
   int max_val = *max_element(A.begin(), A.end());
   int min_val = *min_element(A.begin(), A.end());
 
+  // B 数组的每个位置对应原数组中的一个可能的值，这样就可以统计每个值出现的次数。比如数组中的元素范围从3到7，那么max_val - min_val + 1就是5，刚好对应3、4、5、6、7这五个数。
   vector<int> B(max_val - min_val + 1, 0);
 
   for (int num : A) {
-    B[num - min_val]++;
+    // 这里的 num - min_val 就是为了对应到 B 数组中的索引（i），索引处的值就对应 num 出现的次数
+    int i = num - min_val;
+    B[i]++;
   }
 
   for (int i = 0; i < B.size(); i++) {
     if (B[i] > A.size() / 2) {
+      // 最后要返回的是 num
       return i + min_val;
     }
   }
@@ -82,7 +86,7 @@ int find_main_element_count_sort(vector<int> A) {
 }
 
 void test() {
-  vector<int> A = {0, 5, 5, 5, 1, 7, 5, 5};
+  vector<int> A = {0, 1, 5, 5, 1, 7, 5, 5};
 
   // int m = find_main_element_enumerate(A);
   // int m = find_main_element_boyer_moore(A);
