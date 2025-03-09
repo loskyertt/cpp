@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++)
 
-project(COMMON)
+project("栈和队列实现")
 
 ## ------------------------------------------ basic-settings ----------------------------------------------
 
@@ -21,12 +21,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## ------------------------------------------ files-settings ----------------------------------------------
 # 添加源文件
 file(GLOB SRC_DIR
-    src/*.cpp
-    main.cpp
+    "src/*.cpp"
+    "main.cpp"
 )
 
 set(INCLUDE_DIR
-    include
+    "include"
 )
 
 add_executable(test

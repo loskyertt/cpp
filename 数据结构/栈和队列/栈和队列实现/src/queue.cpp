@@ -1,7 +1,9 @@
+#include "ListNode.hpp"
 #include "queue/queue.hpp"
 #include <iostream>
 #include <stdexcept>
 
+/* ----------------------数组实现------------------------------- */
 ArrayQueue::ArrayQueue(int capacity) {
   // 初始化数组
   nums = new int[capacity];
@@ -57,4 +59,64 @@ int ArrayQueue::capacity() {
 /* 判断队列是否为空 */
 bool ArrayQueue::empty() {
   return size() == 0;
+}
+
+/* ----------------------链表实现------------------------------- */
+LinkedListQueue::LinkedListQueue() {
+  front = rear = nullptr;
+  queueSize = 0;
+}
+
+LinkedListQueue::~LinkedListQueue() {
+  while (front) {
+    ListNode *tmp = front;
+    front = front->next;
+    delete tmp;
+  }
+  rear = nullptr;
+}
+
+/* 入队 */
+void LinkedListQueue::push(int x) {
+  ListNode *newNode = new ListNode(x);
+  if (front == nullptr) {
+    front = rear = newNode;
+  } else {
+    rear->next = newNode;
+    rear = rear->next;
+  }
+
+  queueSize++;
+}
+
+/* 访问队首元素 */
+int LinkedListQueue::peek() {
+  if (empty()) {
+    throw std::out_of_range("队列为空");
+  }
+
+  return front->val;
+}
+
+/* 出队 */
+void LinkedListQueue::pop() {
+  if (empty()) {
+    throw std::out_of_range("队列为空");
+  }
+
+  ListNode *tmp = front;
+  front = front->next;
+  delete tmp;
+
+  queueSize--;
+}
+
+/* 获取队列长度 */
+int LinkedListQueue::size() {
+  return queueSize;
+}
+
+/* 判断队列是否为空 */
+bool LinkedListQueue::empty() {
+  return front == nullptr;
 }

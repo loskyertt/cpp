@@ -63,6 +63,7 @@ int find_main_element_count_sort(vector<int> A) {
   if (A.empty())
     return -1;
 
+  // max_element 和 min_element 是 C++ 标准库中的算法，用于在范围内（比如：[A.begin(), A.end()) 这个范围）找到最大值和最小值的迭代器，使用解引用运算符 * 可以获取迭代器指向的元素值。
   int max_val = *max_element(A.begin(), A.end());
   int min_val = *min_element(A.begin(), A.end());
 
