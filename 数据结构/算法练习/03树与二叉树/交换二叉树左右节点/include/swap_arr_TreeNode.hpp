@@ -12,7 +12,7 @@ int left_index(int index);
 /* 右子树索引 */
 int right_index(int index);
 
-/* 交换r二叉树的所有左、右子树 */
+/* 交换二叉树的所有左、右子树，空的也要交换 */
 void swap_left_and_right(vector<int> &tree, int index = 0);
 
 /* 打印二叉树 */

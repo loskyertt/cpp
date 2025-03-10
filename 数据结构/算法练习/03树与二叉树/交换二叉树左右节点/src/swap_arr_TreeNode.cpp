@@ -13,17 +13,16 @@ int right_index(int index) {
   return 2 * index + 2;
 }
 
-/* 交换r二叉树的所有左、右子树 */
+/* 交换二叉树的所有左、右子树 */
+// 实现后的效果与链式的二叉树不太一样！！
 void swap_left_and_right(vector<int> &tree, int index) {
   // 索引不正确或者当前索引没有节点
   if (index >= tree.size() || tree[index] == INT_MAX) {
     return;
   }
 
-  // 左子树和右子树均不为空，就交换顺序
-  if (tree[left_index(index)] != INT_MAX && right_index(index) != INT_MAX) {
-    swap(tree[left_index(index)], tree[right_index(index)]);
-  }
+  // 交换顺序
+  swap(tree[left_index(index)], tree[right_index(index)]);
 
   swap_left_and_right(tree, left_index(index));
   swap_left_and_right(tree, right_index(index));
