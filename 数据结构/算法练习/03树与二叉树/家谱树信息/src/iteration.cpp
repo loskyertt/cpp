@@ -25,13 +25,6 @@ int find_max_depth(TreeNode *root) {
     if (node->nextsibling != nullptr) {
       stk.push({node->nextsibling, depth});
     }
-    TreeNode *sibling = node->nextsibling;
-
-    // 这种s方式也可以
-    // while (sibling) {
-    //   stk.push({sibling, depth});
-    //   sibling = sibling->nextsibling;
-    // }
   }
 
   return max_depth;
