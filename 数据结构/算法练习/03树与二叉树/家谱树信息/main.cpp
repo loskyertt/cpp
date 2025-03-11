@@ -16,6 +16,7 @@ void test() {
   // root->firstchild->nextsibling->firstchild->firstchild = new TreeNode(8);
 
   // 递归方式实现
+  // cout << "递归方式实现：" << endl;
   // int max_depth = find_max_depth(root, 1);
   // cout << "该家谱有 " << max_depth << " 代" << endl;
 
@@ -24,6 +25,7 @@ void test() {
   // print_arr(last_generation);
 
   // 迭代方式实现
+  cout << "迭代方式实现：" << endl;
   int max_depth = find_max_depth(root);
   cout << "该家谱有 " << max_depth << " 代" << endl;
 

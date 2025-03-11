@@ -126,7 +126,10 @@ void test() {
   root->first_child->next_sibling->next_sibling = new TreeNode(6);
   root->first_child->next_sibling->first_child = new TreeNode(7);
 
+  cout << "递归实现：" << endl;
   calculate_hd_recursion(root); // 计算hd
+
+  // cout << "迭代实现：" << endl;
   // calculate_hd_iterative(root);
   record_hx(root); // 计算hx
   bfs(root);
