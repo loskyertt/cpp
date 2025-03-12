@@ -25,9 +25,9 @@ public:
   void remove_edge(int i, int j); // 参数 i，j 对应 vertices 元素索引
   /* 打印邻接矩阵 */
   void print();
-  /* DFS */
+  /* DFS 搜索 */
   void dfs_recursive(int v);
   void dfs(int start);
-  /* BFS */
+  /* BFS 搜索 */
   void bfs(int start);
 };

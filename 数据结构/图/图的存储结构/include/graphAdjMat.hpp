@@ -4,6 +4,7 @@
 
 using namespace std;
 
+/* 邻接矩阵 */
 class GraphAdjMat {
   vector<int> vertices;       // 顶点列表
   vector<vector<int>> adjMat; // 邻接矩阵，行列索引对应“顶点索引”
@@ -19,8 +20,7 @@ public:
   /* 删除顶点 */
   void remove_vertex(int index);
   /* 添加边 */
-  // 参数 i，j 对应 vertices 元素索引
-  void add_edge(int i, int j);
+  void add_edge(int i, int j); // 参数 i，j 对应 vertices 元素索引
   /* 删除边 */
   void remove_edge(int i, int j);
   /* 打印邻接矩阵 */

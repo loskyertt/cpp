@@ -1,14 +1,13 @@
 #include "graphAdjMat.hpp"
-
 #include <algorithm>
 #include <iostream>
 #include <queue>
 #include <stdexcept>
 #include <vector>
 
-GraphAdjMat::GraphAdjMat(
-    const vector<int> &vertices,
-    const vector<vector<int>> &edges) {
+/* 构造方法*/
+GraphAdjMat::GraphAdjMat(const vector<int> &vertices,
+                         const vector<vector<int>> &edges) {
   // 初始化 visited 数组
   visited.resize(vertices.size(), false);
 
@@ -23,8 +22,10 @@ GraphAdjMat::GraphAdjMat(
   }
 }
 
+/* 获取顶点数量 */
 int GraphAdjMat::size() const { return vertices.size(); }
 
+/* 添加顶点 */
 void GraphAdjMat::add_vertex(int val) {
 
   int n = size();
@@ -36,6 +37,7 @@ void GraphAdjMat::add_vertex(int val) {
   }
 }
 
+/* 删除顶点 */
 void GraphAdjMat::remove_vertex(int index) {
 
   if (index >= size()) {
@@ -49,6 +51,7 @@ void GraphAdjMat::remove_vertex(int index) {
   }
 }
 
+/* 添加边 */
 void GraphAdjMat::add_edge(int i, int j) {
   // 索引越界与相等处理
   if (i < 0 || j < 0 || i >= size() || j >= size() || i == j) {
@@ -59,6 +62,7 @@ void GraphAdjMat::add_edge(int i, int j) {
   adjMat[j][i] = 1;
 }
 
+/* 删除边 */
 void GraphAdjMat::remove_edge(int i, int j) {
   // 索引越界与相等处理
   if (i < 0 || j < 0 || i >= size() || j >= size() || i == j) {
@@ -69,6 +73,7 @@ void GraphAdjMat::remove_edge(int i, int j) {
   adjMat[j][i] = 0;
 }
 
+/* 打印邻接矩阵 */
 void GraphAdjMat::print() {
   cout << "顶点：" << endl;
   for (int vertex : vertices) {
@@ -89,6 +94,7 @@ void GraphAdjMat::print() {
   cout << endl;
 }
 
+/* DFS 搜索 */
 void GraphAdjMat::dfs_recursive(int index) {
   cout << vertices[index] << " ";
   visited[index] = true;
@@ -107,6 +113,7 @@ void GraphAdjMat::dfs(int start) {
   cout << endl;
 }
 
+/* BFS 搜索 */
 void GraphAdjMat::bfs(int start) {
   fill(visited.begin(), visited.end(), false);
   queue<int> q; // 创建队列
