@@ -3,9 +3,8 @@
 #include <stdexcept>
 
 /* 构造方法*/
-GraphAdjMat::GraphAdjMat(
-    const vector<int> &vertices,
-    const vector<vector<int>> &edges) {
+GraphAdjMat::GraphAdjMat(const vector<int> &vertices,
+                         const vector<vector<int>> &edges) {
   // 添加顶点
   for (int val : vertices) {
     add_vertex(val);

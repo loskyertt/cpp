@@ -56,15 +56,23 @@ void test_GraphAdjLinkedList() {
   // graph.remove_edge(1, 5);
   // graph.print();
 
-  cout << "删除了顶点后的图：" << endl;
-  graph.remove_vertex(1);
-  graph.print();
+  // cout << "删除了顶点后的图：" << endl;
+  // graph.remove_vertex(3);
+  // graph.print();
+
+  // cout << "添加了边后的图：" << endl;
+  // graph.add_edge(1, 4);
+  // graph.print();
+
+  // cout << "添加了点后的图：" << endl;
+  // graph.add_vertex(7);
+  // graph.print();
 }
 
 int main() {
 
-  test_GraphAdjMat();
-  test_GraphAdjListHash();
+  // test_GraphAdjMat();
+  // test_GraphAdjListHash();
   test_GraphAdjLinkedList();
 
   return 0;

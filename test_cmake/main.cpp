@@ -1,4 +1,5 @@
 #include "add.h"
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <unordered_map>
@@ -40,6 +41,15 @@ void test_vector() {
   nums.erase(nums.begin() + index); // 删除索引处的元素
   cout << "Current nums: ";
   print_vector(nums);
+
+  auto it = nums.begin();
+  cout << "*it: " << *(it + 1) << endl;
+
+  if (find(nums.begin(), nums.end(), 5) == nums.end()) {
+    cout << "没有数字 5" << endl;
+  } else {
+    cout << "有数字 5" << endl;
+  }
 }
 
 /* 测试哈希表 */
@@ -65,6 +75,12 @@ void test_unordered_map() {
 
   cout << "有 12836 吗？" << " " << map.count(12836) << endl;
   cout << "有 1836 吗？" << " " << map.count(1836) << endl;
+
+  cout << endl;
+
+  if (map.find(12836) != map.end()) {
+    cout << "12836 在" << endl;
+  }
 
   cout << endl;
 }

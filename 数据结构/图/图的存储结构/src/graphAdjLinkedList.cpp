@@ -30,6 +30,18 @@ void GraphAdjLinkedList::remove_node(Vertex *n0, int val) {
   }
 }
 
+/* 获取目标元素索引 */
+int GraphAdjLinkedList::get_index(int target) {
+  for (int i = 0; i < vertices.size(); i++) {
+    if (vertices[i] == target) {
+      return i;
+    }
+  }
+
+  throw out_of_range("没有这个顶点！");
+  // return -1;
+}
+
 /* 打印链表 */
 void GraphAdjLinkedList::prnt_linkedlist(Vertex *node) {
   cout << "[ ";
@@ -60,6 +72,10 @@ int GraphAdjLinkedList::size() {
 
 /* 添加边 */
 void GraphAdjLinkedList::add_edge(int src, int dist) {
+  if (find(vertices.begin(), vertices.end(), src) == vertices.end() || find(vertices.begin(), vertices.end(), dist) == vertices.end()) {
+    throw out_of_range("没有这些顶点！");
+  }
+
   Vertex *vet_src = new Vertex(src);
   Vertex *vet_dist = new Vertex(dist);
 
@@ -97,14 +113,12 @@ void GraphAdjLinkedList::add_vertex(int vertex) {
 }
 
 /* 删除顶点 */
-void GraphAdjLinkedList::remove_vertex(int index) {
-  if (index >= size()) {
-    throw out_of_range("顶点不存在");
-  }
+void GraphAdjLinkedList::remove_vertex(int vertex) {
+  int index = get_index(vertex);
 
   // 先删除每条边
   for (int val : vertices) {
-    remove_edge(val, vertices[index]);
+    remove_edge(val, vertex);
   }
 
   // 把顶点从顶点列表中移除

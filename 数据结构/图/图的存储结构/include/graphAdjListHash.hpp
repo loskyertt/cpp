@@ -10,15 +10,15 @@ class GraphAdjListHash {
   // 邻接表，key: 顶点，value: 该顶点的所有邻接顶点
   unordered_map<int, vector<int>> adjList; // <顶点, [所有邻接顶点]>
 
+  /* 在 vector 中删除指定节点 */
+  void remove(vector<int> &vertices, int vertex);
+
   /* 打印数组 */
   void print_vector(vector<int> vertices);
 
 public:
   /* 构造方法 */
   GraphAdjListHash(const vector<vector<int>> &edges);
-
-  /* 在 vector 中删除指定节点 */
-  void remove(vector<int> &vertices, int vertex);
 
   /* 获取顶点个数 */
   int size();

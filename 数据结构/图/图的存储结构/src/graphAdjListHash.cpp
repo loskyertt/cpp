@@ -4,6 +4,16 @@
 #include <vector>
 
 // private:
+/* 在 vector 中删除指定节点 */
+void GraphAdjListHash::remove(vector<int> &vertices, int vertex) {
+  for (int i; i < vertices.size(); i++) {
+    if (vertices[i] == vertex) {
+      vertices.erase(vertices.begin() + i);
+      break;
+    }
+  }
+}
+
 /* 打印数组 */
 void GraphAdjListHash::print_vector(vector<int> vertices) {
   cout << "[ ";
@@ -21,16 +31,6 @@ GraphAdjListHash::GraphAdjListHash(const vector<vector<int>> &edges) {
     add_vertex(edge[0]);
     add_vertex(edge[1]);
     add_edge(edge[0], edge[1]);
-  }
-}
-
-/* 在 vector 中删除指定节点 */
-void GraphAdjListHash::remove(vector<int> &vertices, int vertex) {
-  for (int i; i < vertices.size(); i++) {
-    if (vertices[i] == vertex) {
-      vertices.erase(vertices.begin() + i);
-      break;
-    }
   }
 }
 
@@ -77,8 +77,8 @@ void GraphAdjListHash::remove_vertex(int vertex) {
   // 在邻接链表中删除顶点 vet 对应的链表
   adjList.erase(vertex);
   // 遍历其它顶点链表，删除所有包含 vet 的边
-  for (auto &kv : adjList) {
-    remove(kv.second, vertex);
+  for (auto &[key, value] : adjList) {
+    remove(value, vertex);
   }
 }
 
