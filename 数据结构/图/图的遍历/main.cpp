@@ -4,14 +4,23 @@
 using namespace std;
 
 void test_GraphAdjMat() {
-  vector<int> vertices = {0, 1, 2, 3, 4, 5, 6};
+  // vector<int> vertices = {0, 1, 2, 3, 4, 5, 6};
+  // vector<vector<int>> edges = {
+  //     {0, 1},
+  //     {0, 3},
+  //     {1, 2},
+  //     {2, 5},
+  //     {4, 5},
+  //     {5, 6}};
+
+  vector<int> vertices = {1, 3, 2, 5, 4};
   vector<vector<int>> edges = {
       {0, 1},
       {0, 3},
       {1, 2},
-      {2, 5},
-      {4, 5},
-      {5, 6}};
+      {2, 3},
+      {2, 4},
+      {3, 4}};
 
   GraphAdjMat graph(vertices, edges);
 
