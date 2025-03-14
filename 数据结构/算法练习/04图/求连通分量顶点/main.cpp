@@ -19,15 +19,33 @@ void dfs(int index, vector<bool> &visited, vector<int> vertices, vector<Vertex *
   cout << vertices[index] << " ";
   visited[index] = true;
 
+  // 记录当前节点（遍历后的节点的下一个节点）
   Vertex *cur_vertex = adjList[index]->next;
-  while (cur_vertex && visited[get_index(vector<int> vertices, int val)]) {
+  while (cur_vertex) {
+    // 如果没有访问过，就继续遍历
+    if (visited[get_index(vertices, cur_vertex->val)] == false) {
+      int curr_index = get_index(vertices, cur_vertex->val);
+      dfs(curr_index, visited, vertices, adjList);
+    } else { // 否则就去下个节点
+      cur_vertex = cur_vertex->next;
+    }
   }
 }
 
-void traverse(vector<int> vertices, vector<Vertex *> adjList) {
+int traverse(vector<int> vertices, vector<Vertex *> adjList) {
   int start = 0;
   vector<bool> visited(vertices.size(), false);
-  dfs(start, visited, vertices, adjList);
+  // dfs(start, visited, vertices, adjList);
+  int count_connected_components = 0;
+  for (int i = 0; i < vertices.size(); i++) {
+    if (visited[i] == false) {
+      dfs(i, visited, vertices, adjList);
+      count_connected_components++;
+      cout << endl;
+    }
+  }
+
+  return count_connected_components;
 }
 
 void test() {
@@ -48,7 +66,9 @@ void test() {
 
   vector<Vertex *> adjList = graph.get_adjList();
 
-  traverse(vertices, adjList);
+  int count_connected_components = traverse(vertices, adjList);
+
+  cout << "连通分量为：" << count_connected_components << endl;
 }
 
 int main() {
