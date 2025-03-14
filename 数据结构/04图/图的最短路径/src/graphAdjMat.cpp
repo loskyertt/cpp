@@ -38,6 +38,7 @@ void GraphAdjMat::add_vertex(char val) {
   int i = 0;
   for (auto &row : adjMat) { // 注意这里 row 前要加 &，因为 row 是一个拷贝，auto row : adjMat 不会修改原始的 adjMat
     row.push_back(INT_MAX);
+    // 设置矩阵主对角线元素都为 0
     row[i] = 0;
     i++;
   }

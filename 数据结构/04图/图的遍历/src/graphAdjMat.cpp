@@ -108,7 +108,7 @@ void GraphAdjMat::dfs_recursive(int index) {
 
 void GraphAdjMat::dfs(int start) {
   fill(visited.begin(), visited.end(), false);
-  cout << "DFS 递归遍历：";
+  cout << "DFS 遍历：";
   dfs_recursive(start);
   cout << endl;
 }
@@ -118,8 +118,8 @@ void GraphAdjMat::bfs(int start) {
   fill(visited.begin(), visited.end(), false);
   queue<int> q; // 创建队列
 
-  visited[start] = true;
   q.push(start);
+  visited[start] = true;
 
   cout << "BFS 遍历：";
 
@@ -131,9 +131,11 @@ void GraphAdjMat::bfs(int start) {
     for (int i = 0; i < size(); i++) {
       // 当访问到该顶点，且没有被访问时，送进队列中
       if (adjMat[index][i] == 1 && !visited[i]) {
-        visited[i] = true;
         q.push(i);
+        visited[i] = true;
       }
     }
   }
+
+  cout << endl;
 }

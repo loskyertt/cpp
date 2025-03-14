@@ -5,10 +5,11 @@
 #include <stdexcept>
 #include <vector>
 
-// 获取顶点列表中元素索引
-int GraphAdjMat::get_index(char val) {
+// private:
+/* 获取顶点索引 */
+int GraphAdjMat::get_index(int target) {
   for (int i = 0; i < size(); i++) {
-    if (vertices[i] == val) {
+    if (vertices[i] == target) {
       return i;
     }
   }
@@ -16,43 +17,40 @@ int GraphAdjMat::get_index(char val) {
   throw out_of_range("没有这个顶点！");
 }
 
+// public:
 /* 构造方法*/
-GraphAdjMat::GraphAdjMat(const vector<char> &vertices,
-                         const vector<vector<char>> &edges) {
-  // 初始化 indegree 列表
+GraphAdjMat::GraphAdjMat(const vector<int> &vertices,
+                         const vector<vector<int>> &edges) {
+
+  // 初始化 degree 列表
   indegree.resize(vertices.size(), 0);
 
   // 添加顶点
-  for (char val : vertices) {
+  for (int val : vertices) {
     add_vertex(val);
   }
 
   // 添加边
-  for (const auto &edge : edges) {
-    int src = get_index(edge[0]);
-    int dist = get_index(edge[1]);
-    add_edge(src, dist);
-
-    // 添加入度
-    indegree[dist]++;
+  for (const vector<int> &edge : edges) {
+    int src_index = get_index(edge[0]);
+    int dist_index = get_index(edge[1]);
+    add_edge(src_index, dist_index);
+    indegree[dist_index]++;
   }
 }
 
-/* 获得邻接矩阵 */
-vector<vector<int>> GraphAdjMat::get_adjMat() {
-  return adjMat;
-}
-
-/* 获取入度列表 */
+/* 获得 indegree 列表 */
 vector<int> GraphAdjMat::get_indegree() {
   return indegree;
 }
 
 /* 获取顶点数量 */
-int GraphAdjMat::size() const { return vertices.size(); }
+int GraphAdjMat::size() const {
+  return vertices.size();
+}
 
 /* 添加顶点 */
-void GraphAdjMat::add_vertex(char val) {
+void GraphAdjMat::add_vertex(int val) {
 
   int n = size();
 
@@ -90,7 +88,6 @@ void GraphAdjMat::add_edge(int i, int j) {
   }
 
   adjMat[i][j] = 1;
-
   // adjMat[j][i] = 1;
 }
 
@@ -108,7 +105,7 @@ void GraphAdjMat::remove_edge(int i, int j) {
 /* 打印邻接矩阵 */
 void GraphAdjMat::print() {
   cout << "顶点：" << endl;
-  for (auto vertex : vertices) {
+  for (int vertex : vertices) {
     cout << vertex << " ";
   }
 
@@ -130,11 +127,11 @@ void GraphAdjMat::print() {
 }
 
 /* 拓扑排序 */
-vector<char> GraphAdjMat::topology_sort() {
-  vector<char> res;
+vector<int> GraphAdjMat::topology_sort() {
+  vector<int> res;
   queue<int> q;
 
-  // 先把所有入度为 0 的顶点添加到队列中
+  // 把所有入度为 0 的顶点放到队列中
   for (int i = 0; i < size(); i++) {
     if (indegree[i] == 0) {
       q.push(i);
@@ -144,10 +141,9 @@ vector<char> GraphAdjMat::topology_sort() {
   while (!q.empty()) {
     int index = q.front();
     q.pop();
-
     res.push_back(vertices[index]);
 
-    // 遍历该顶点对应邻接矩阵的所有元素，如果有连接的顶点，就把连接顶点的入度减一
+    // 把 index 对应顶点（src 顶点）,i 对应的是 dist 顶点，因为访问过了，所以要让这些 dist 顶点的入度减一
     for (int j = 0; j < size(); j++) {
       if (adjMat[index][j] == 1) {
         indegree[j]--;

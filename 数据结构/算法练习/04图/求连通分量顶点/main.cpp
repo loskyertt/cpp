@@ -23,21 +23,20 @@ void dfs(int index, vector<bool> &visited, vector<int> vertices, vector<Vertex *
   Vertex *cur_vertex = adjList[index]->next;
   while (cur_vertex) {
     // 如果没有访问过，就继续遍历
-    if (visited[get_index(vertices, cur_vertex->val)] == false) {
-      int curr_index = get_index(vertices, cur_vertex->val);
+    int curr_index = get_index(vertices, cur_vertex->val);
+    if (visited[curr_index] == false) {
       dfs(curr_index, visited, vertices, adjList);
-    } else { // 否则就去下个节点
-      cur_vertex = cur_vertex->next;
     }
+    cur_vertex = cur_vertex->next;
   }
 }
 
 int traverse(vector<int> vertices, vector<Vertex *> adjList) {
-  int start = 0;
   vector<bool> visited(vertices.size(), false);
   // dfs(start, visited, vertices, adjList);
   int count_connected_components = 0;
   for (int i = 0; i < vertices.size(); i++) {
+    // dfs 会遍历完一个连通图的所有顶点
     if (visited[i] == false) {
       dfs(i, visited, vertices, adjList);
       count_connected_components++;

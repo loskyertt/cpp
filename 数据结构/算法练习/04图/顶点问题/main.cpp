@@ -1,4 +1,5 @@
 #include "graphAdjMat.hpp"
+#include <climits>
 #include <iostream>
 #include <vector>
 
@@ -35,7 +36,7 @@ void test() {
 
   GraphAdjMat graph(vertices, edges);
 
-  // graph.print();
+  graph.print();
 
   vector<vector<int>> adjMat = graph.get_adjMat();
 
