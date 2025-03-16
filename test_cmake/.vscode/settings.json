@@ -1,5 +1,7 @@
 {
     "clangd.arguments": [
         "--compile-commands-dir=${workspacefolder}/build"
-    ]
+    ],
+    "editor.tabSize": 2,
+    "terminal.integrated.mouseWheelZoom": true
 }
