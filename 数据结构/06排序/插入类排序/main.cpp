@@ -12,7 +12,7 @@ void print_vector(vector<int> nums) {
   cout << endl;
 }
 
-/* 直接插入排序：方式一 */
+/* 直接插入排序：方式一，稳定 */
 // 效率比较低
 void insert_sort_directly_01(vector<int> &nums) {
   for (int i = 1; i < nums.size(); i++) {
@@ -27,12 +27,13 @@ void insert_sort_directly_01(vector<int> &nums) {
   }
 }
 
-/* 直接插入排序：方式二 */
+/* 直接插入排序：方式二，稳定 */
 void insert_sort_directly_02(vector<int> &nums) {
   for (int i = 1; i < nums.size(); i++) {
     // 记录下 nums[i] 的值
     int tmp = nums[i];
 
+    // i 前面的元素都是排好序的，从 i 前面的元素开始
     int j = i - 1;
     // 移动比 tmp 大的元素
     while (nums[j] > tmp && j >= 0) {
@@ -45,7 +46,7 @@ void insert_sort_directly_02(vector<int> &nums) {
   }
 }
 
-/* 折半插入排序 */
+/* 折半插入排序，稳定 */
 void insert_sort_binary(vector<int> &nums) {
   for (int i = 1; i < nums.size(); i++) {
     // 如果 nums[i] >= nums[i-1] ，直接去下一个数，因为前面的数都是有序的
@@ -73,6 +74,31 @@ void insert_sort_binary(vector<int> &nums) {
 
     // 插入 tmp，tmp 一定是插到 left 处
     nums[left] = tmp;
+  }
+}
+
+/* 希尔排序，不稳定 */
+void shell_sort(vector<int> &nums) {
+  // 定义增量
+  int increment = nums.size() / 2;
+
+  while (increment > 0) {
+    for (int i = increment; i < nums.size(); i++) {
+      int tmp = nums[i];
+
+      // 这部分的逻辑跟直接插入排序的逻辑是一样的
+      int j = i - increment;
+      // 这里不能写成 j >= 0 && nums[j - increment] > tmp，因为 nums[j - increment] 在 j == 0 时会访问到 nums[-increment]，这在 C++ 中是非法访问
+      while (j >= 0 && nums[j] > tmp) {
+        nums[j + increment] = nums[j];
+        j -= increment;
+      }
+
+      // 插入 tmp
+      nums[j + increment] = tmp;
+    }
+
+    increment /= 2;
   }
 }
 
@@ -115,10 +141,27 @@ void test_03() {
   print_vector(nums);
 }
 
+/* 测试 */
+void test_04() {
+  vector<int> nums = {13, 6, 3, 31, 9, 27, 5, 11, 2};
+
+  cout << "初始数组：";
+  print_vector(nums);
+
+  shell_sort(nums);
+
+  cout << "希尔排序后的数组：";
+  print_vector(nums);
+}
+
 int main() {
   test_01();
+  cout << endl;
   test_02();
+  cout << endl;
   test_03();
+  cout << endl;
+  test_04();
 
   return 0;
 }

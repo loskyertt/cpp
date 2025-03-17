@@ -12,7 +12,7 @@ void print_vector(vector<int> nums) {
   cout << endl;
 }
 
-/* 冒泡排序 */
+/* 冒泡排序：稳定 */
 void bubble_sort(vector<int> &nums) {
   for (int i = 0; i < nums.size() - 1; i++) { // i是每次减少比较的元素个数。最后一个元素不需要比较
     bool swapped = false;                     // 如果元素是有序的，最终的状态一定还是 false，那么就可以直接退出循环
@@ -27,10 +27,6 @@ void bubble_sort(vector<int> &nums) {
       break;
     }
   }
-}
-
-/* 希尔排序 */
-void shell_sort(vector<int> &nums) {
 }
 
 /* 测试 */
