@@ -33,12 +33,12 @@ void bubble_sort(vector<int> &nums) {
 // 哨兵分划
 int get_pivot_index(vector<int> &nums, int left, int right) {
   int i = left, j = right; // 初始化左右指针
-  int pivot = nums[left];  // 把左边第一个数作为哨兵
+                           // 把左边第一个数作为哨兵
   while (i < j) {
-    while (i < j && nums[j] >= pivot) {
+    while (i < j && nums[j] >= nums[left]) {
       j--;
     }
-    while (i < j && nums[i] <= pivot) {
+    while (i < j && nums[i] <= nums[left]) {
       i++;
     }
 

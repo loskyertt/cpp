@@ -83,19 +83,20 @@ void shell_sort(vector<int> &nums) {
   int increment = nums.size() / 2;
 
   while (increment > 0) {
-    for (int i = increment; i < nums.size(); i++) {
-      int tmp = nums[i];
+    // 对每个子序列进行处理：0 到 increment-1
+    for (int i = 0; i < increment; i++) {
+      // 对当前子序列进行插入排序
+      for (int j = i + increment; j < nums.size(); j += increment) {
+        int tmp = nums[j];
+        int k = j - increment;
 
-      // 这部分的逻辑跟直接插入排序的逻辑是一样的
-      int j = i - increment;
-      // 这里不能写成 j >= 0 && nums[j - increment] > tmp，因为 nums[j - increment] 在 j == 0 时会访问到 nums[-increment]，这在 C++ 中是非法访问
-      while (j >= 0 && nums[j] > tmp) {
-        nums[j + increment] = nums[j];
-        j -= increment;
+        while (k >= 0 && nums[k] > tmp) {
+          nums[k + increment] = nums[k];
+          k -= increment;
+        }
+
+        nums[k + increment] = tmp;
       }
-
-      // 插入 tmp
-      nums[j + increment] = tmp;
     }
 
     increment /= 2;
