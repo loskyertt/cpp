@@ -141,10 +141,41 @@ void test_unordered_map() {
   cout << endl;
 }
 
+/* 测试枚举 */
+void test_enumerate() {
+  enum spectrum { red,
+                  yellow,
+                  gree,
+                  blue,
+                  vilot };
+
+  spectrum band;
+  cout << band << endl;
+
+  cout << yellow << endl;
+}
+
+void test_array_addr() {
+  // int arr[5] = {1, 2, 3, 4, 5};
+
+  // cout << "元素首地址(&arr[0]):" << &arr[0] << endl;
+  // cout << "元素首地址(arr):" << arr << endl;
+  // cout << "arr 地址:" << &arr << endl;
+
+  int a = 1;
+  int &p = a;
+
+  cout << "&a: " << &a << endl;
+  cout << "p = " << p << endl;
+  cout << "&p = " << &p << endl;
+}
+
 int main() {
   // test_self_add();
-  test_vector();
+  // test_vector();
   // test_unordered_map();
+  // test_enumerate();
+  test_array_addr();
 
   return 0;
 }
