@@ -66,7 +66,7 @@ bool is_symmetric(ListNode *head) {
 }
 
 void test() {
-  string word = "ADCDEDCDA";
+  string word = "ACBBA";
   ListNode *word_l = word_to_linklist(word);
   print_linklist(word_l);
 

@@ -71,7 +71,7 @@ void test() {
   cout << "初始链表：" << endl;
   print_linklist(head);
 
-  remove_x(head, 5);
+  remove_x(head, 8);
   cout << "移除 val = x 后的链表：" << endl;
   print_linklist(head);
 }

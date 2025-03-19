@@ -6,29 +6,34 @@
 using namespace std;
 
 struct ListNode {
-  int val;
-  ListNode *next;
-  ListNode(int x) : val(x), next(nullptr) {}
+    int val;
+    ListNode* next;
+    ListNode(int x)
+        : val(x)
+        , next(nullptr)
+    {
+    }
 };
 
 /* 去除绝对值相等的重复节点 */
-void remove_duplicates(ListNode *head) {
-  unordered_set<int> screen;
-  // 在这里的 current 是始终指向当前遍历的节点，而 current->next 则是指向要检查是否重复的节点，所以不需要维护 prev 节点
-  ListNode *current = head;
+void remove_duplicates(ListNode* head)
+{
+    unordered_set<int> screen;
+    // 在这里的 current 是始终指向当前遍历的节点，而 current->next 则是指向要检查是否重复的节点，所以不需要维护 prev 节点
+    ListNode* current = head;
 
-  while (current && current->next) {
-    if (screen.find(abs(current->next->val)) != screen.end()) {
-      // 不相等代表有重复元素
-      ListNode *tmp = current->next;
-      // 这里删除的实际上是 current->next 指向的节点（tmp 节点），所以只需要更新 current->next，使其指向 current->next->next
-      current->next = current->next->next;
-      delete tmp;
-    } else {
-      screen.insert(abs(current->next->val));
-      current = current->next;
+    while (current && current->next) {
+        if (screen.find(abs(current->next->val)) != screen.end()) {
+            // 不相等代表有重复元素
+            ListNode* tmp = current->next;
+            // 这里删除的实际上是 current->next 指向的节点（tmp 节点），所以只需要更新 current->next，使其指向 current->next->next
+            current->next = current->next->next;
+            delete tmp;
+        } else {
+            screen.insert(abs(current->next->val));
+            current = current->next;
+        }
     }
-  }
 }
 
 // void remove_duplicates(ListNode *head) {
@@ -53,30 +58,32 @@ void remove_duplicates(ListNode *head) {
 //   }
 // }
 
-void print_list(ListNode *head) {
-  ListNode *tmp = head->next;
-  while (tmp) {
-    cout << tmp->val << " -> ";
-    tmp = tmp->next;
-  }
+void print_list(ListNode* head)
+{
+    ListNode* tmp = head->next;
+    while (tmp) {
+        cout << tmp->val << " -> ";
+        tmp = tmp->next;
+    }
 
-  cout << endl;
+    cout << endl;
 }
 
-int main() {
-  ListNode *head = new ListNode(0);
-  head->next = new ListNode(21);
-  head->next->next = new ListNode(-15);
-  head->next->next->next = new ListNode(-15);
-  head->next->next->next->next = new ListNode(-7);
-  head->next->next->next->next->next = new ListNode(15);
+int main()
+{
+    ListNode* head = new ListNode(0);
+    head->next = new ListNode(21);
+    head->next->next = new ListNode(-15);
+    head->next->next->next = new ListNode(-15);
+    head->next->next->next->next = new ListNode(-7);
+    head->next->next->next->next->next = new ListNode(15);
 
-  cout << "初始链表：" << endl;
-  print_list(head);
+    cout << "初始链表：" << endl;
+    print_list(head);
 
-  cout << "去重后的链表：" << endl;
-  remove_duplicates(head);
-  print_list(head);
+    cout << "去重后的链表：" << endl;
+    remove_duplicates(head);
+    print_list(head);
 
-  return 0;
+    return 0;
 }

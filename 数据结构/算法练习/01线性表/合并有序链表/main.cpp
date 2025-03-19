@@ -80,34 +80,6 @@ ListNode *merge_linklist_enumerate(ListNode *head1, ListNode *head2) {
   return head3;
 }
 
-/* 将两个升序链表合并为一个升序链表，新链表无重复数据，双指针法实现（目前有问题） */
-// ListNode *merge_linklist_double_pointer(ListNode *head1, ListNode *head2) {
-//   ListNode dummy(INT_MAX);
-//   ListNode *curr3 = &dummy;
-
-//   ListNode *curr1 = head1->next;
-//   ListNode *curr2 = head2->next;
-
-//   while (curr1 && curr2) {
-//     if (curr1->val < curr2->val) {
-//       curr3->next = curr1;
-//       curr1 = curr1->next;
-//     } else {
-//       curr3->next = curr2;
-//       curr2 = curr2->next;
-//     }
-//     curr3 = curr3->next;
-//   }
-
-//   if (curr1) {
-//     curr3->next = curr1;
-//   } else {
-//     curr3->next = curr2;
-//   }
-
-//   return dummy.next;
-// }
-
 void test() {
   vector<int> nums1 = {1, 3, 4, 5, 9, 10, 11};
   vector<int> nums2 = {1, 2, 3, 6, 8, 12};
@@ -126,10 +98,6 @@ void test() {
   ListNode *head3 = merge_linklist_enumerate(head1, head2);
   cout << "枚举法实现：head3: ";
   print_list(head3->next);
-
-  // ListNode *head3_ = merge_linklist_double_pointer(head1, head2);
-  // cout << "双指针法实现：head3: ";
-  // print_list(head3_);
 }
 
 int main() {
