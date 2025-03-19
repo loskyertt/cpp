@@ -155,19 +155,27 @@ void test_enumerate() {
   cout << yellow << endl;
 }
 
-void test_array_addr() {
+void test_addr() {
   // int arr[5] = {1, 2, 3, 4, 5};
 
   // cout << "元素首地址(&arr[0]):" << &arr[0] << endl;
   // cout << "元素首地址(arr):" << arr << endl;
   // cout << "arr 地址:" << &arr << endl;
 
-  int a = 1;
-  int &p = a;
+  // int a = 1;
+  // int &p = a;
 
-  cout << "&a: " << &a << endl;
-  cout << "p = " << p << endl;
-  cout << "&p = " << &p << endl;
+  // cout << "&a: " << &a << endl;
+  // cout << "p = " << p << endl;
+  // cout << "&p = " << &p << endl;
+
+  int b = 2;
+  int *pb = &b;
+
+  cout << "*pb = " << *pb << endl;
+  cout << "pb = " << pb << endl;
+  cout << "&b = " << &b << endl;
+  cout << "b = " << b << endl;
 }
 
 int main() {
@@ -175,7 +183,7 @@ int main() {
   // test_vector();
   // test_unordered_map();
   // test_enumerate();
-  test_array_addr();
+  test_addr();
 
   return 0;
 }

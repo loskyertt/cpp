@@ -1,14 +1,9 @@
+#include "linked_list.hpp"
 #include <climits>
 #include <iostream>
-#include <vector>
 
-using namespace std;
-
-struct ListNode {
-  int val;
-  ListNode *next;
-  ListNode(int x) : val(x), next(nullptr) {}
-};
+using std::cout;
+using std::endl;
 
 /* 通过列表创建链表 */
 void create_linklist(ListNode *head, vector<int> nums) {
@@ -78,30 +73,4 @@ ListNode *merge_linklist_enumerate(ListNode *head1, ListNode *head2) {
   }
 
   return head3;
-}
-
-void test() {
-  vector<int> nums1 = {1, 3, 4, 5, 9, 10, 11};
-  vector<int> nums2 = {1, 2, 3, 6, 8, 12};
-
-  ListNode *head1 = new ListNode(INT_MAX);
-  ListNode *head2 = new ListNode(INT_MAX);
-
-  create_linklist(head1, nums1);
-  create_linklist(head2, nums2);
-
-  cout << "head1: ";
-  print_list(head1->next);
-  cout << "head2: ";
-  print_list(head2->next);
-
-  ListNode *head3 = merge_linklist_enumerate(head1, head2);
-  cout << "枚举法实现：head3: ";
-  print_list(head3->next);
-}
-
-int main() {
-  test();
-
-  return 0;
 }
