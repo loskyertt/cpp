@@ -6,15 +6,30 @@
 using namespace std;
 
 /* 枚举法 */
+// 这个实现能够避免重复计算已经检查过的元素值，但时间复杂度仍然是 O(n²)
 int find_main_element_enumerate(vector<int> A) {
-
   for (int i = 0; i < A.size(); i++) {
-    int count = 1;
+    // 检查当前元素是否已经在之前的位置出现过
+    bool seen_before = false;
+    for (int k = 0; k < i; k++) {
+      if (A[i] == A[k]) {
+        seen_before = true;
+        break;
+      }
+    }
+
+    // 如果当前元素已经在之前出现过，跳过
+    if (seen_before)
+      continue;
+
+    // 计算当前元素出现次数
+    int count = 0;
     for (int j = 0; j < A.size(); j++) {
-      if (j != i && A[i] == A[j]) {
+      if (A[i] == A[j]) {
         count++;
       }
     }
+
     if (count > A.size() / 2) {
       return A[i];
     }
