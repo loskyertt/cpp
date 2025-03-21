@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++)
 
-project("哈夫曼树")
+project("test")
 
 ## ------------------------------------------ basic-settings ----------------------------------------------
 
@@ -21,14 +21,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 ## ------------------------------------------ files-settings ----------------------------------------------
 # 添加源文件
 file(GLOB SRC_DIR
-    "src/*.cpp"
-    "main.cpp"
+    # "src/*.cpp"
+    "test.cpp"
 )
 
 add_executable(test
     ${SRC_DIR}
 )
 
-target_include_directories(test PUBLIC
-    include
-)
+# target_include_directories(test PUBLIC
+#     include
+# )
