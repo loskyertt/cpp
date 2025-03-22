@@ -47,7 +47,8 @@ int get_WPL_recursion(TreeNode *root, int depth = 0) {
     return root->weight * depth;
   }
 
-  return get_WPL_recursion(root->left, depth + 1) + get_WPL_recursion(root->right, depth + 1);
+  return get_WPL_recursion(root->left, depth + 1) +
+         get_WPL_recursion(root->right, depth + 1);
 }
 
 void test() {

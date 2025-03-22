@@ -49,7 +49,7 @@
 //       last_generation.push_back(node->data);
 //     }
 
-//     // 将子节点和兄弟节点入队
+//     // 将子节点和兄弟节点入队，这种方式不会导致重复入队！因为入队的是当前节点的所有孩子节点
 //     TreeNode *child = node->firstchild;
 //     while (child) {
 //       q.push({child, depth + 1});

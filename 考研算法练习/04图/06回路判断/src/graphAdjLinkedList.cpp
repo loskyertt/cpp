@@ -55,7 +55,7 @@ int GraphAdjLinkedList::get_index(int target) {
 }
 
 /* 打印链表 */
-void GraphAdjLinkedList::prnt_linkedlist(Vertex *node) {
+void GraphAdjLinkedList::print_linkedlist(Vertex *node) {
   cout << "[ ";
   while (node) {
     cout << node->val << " -> ";
@@ -185,13 +185,13 @@ void GraphAdjLinkedList::print() {
   cout << "邻接表（链表实现）：" << endl;
   for (const auto adj : adjList) {
     cout << adj->val << " -> ";
-    prnt_linkedlist(adj->next);
+    print_linkedlist(adj->next);
   }
   cout << endl;
 }
 
-/* 拓扑排序 */
-vector<int> GraphAdjLinkedList::topology_sort() {
+/* 拓扑排序：判断有向图是否存在回路 */
+bool GraphAdjLinkedList::is_DAG() {
   vector<int> res;
   queue<int> q;
 
@@ -220,39 +220,16 @@ vector<int> GraphAdjLinkedList::topology_sort() {
     }
   }
 
-  return res;
-}
+  // 如果入度列表中还有不为 0 的，说明有环
+  // for (int val : indegree) {
+  //   if (val != 0) {
+  //     return true;
+  //   }
+  // }
 
-/* 判断 src 到 dist 是否存在路径 */
-bool GraphAdjLinkedList::is_existed_path(int src, int dist) {
-  if (src == dist) {
+  // 如果 res 列表中的顶点个数和 vertices 列表中的顶点个数不相等，说明有环
+  if (res.size() != vertices.size()) {
     return true;
-  }
-
-  // 获取起始点和终止点的索引
-  int src_index = get_index(src);
-  int dist_index = get_index(dist);
-
-  // cout << "src_index = " << src_index << "; " << "dist_index = " << dist_index << endl;
-  queue<int> q;
-  q.push(src_index);
-
-  while (!q.empty()) {
-    int index = q.front();
-    q.pop();
-
-    Vertex *next_vertex = adjList[index]->next;
-
-    while (next_vertex) {
-      int next_index = get_index(next_vertex->val);
-      // 表示找到这条路径了
-      if (next_index == dist_index) {
-        return true;
-      } else {
-        q.push(next_index);
-        next_vertex = next_vertex->next;
-      }
-    }
   }
 
   return false;

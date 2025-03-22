@@ -28,7 +28,7 @@ void test_GraphAdjMat() {
 
   vector<int> topology_res = graph.topology_sort();
 
-  cout << "拓扑排序：";
+  cout << "拓扑排序（邻接矩阵）：";
   for (int val : topology_res) {
     cout << val << " ";
   }
@@ -63,7 +63,7 @@ void test_GraphAdjLinkedList() {
 
   vector<int> topology_res = graph.topology_sort();
 
-  cout << "拓扑排序：";
+  cout << "拓扑排序（邻接表）：";
   for (int val : topology_res) {
     cout << val << " ";
   }

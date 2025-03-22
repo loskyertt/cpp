@@ -29,7 +29,7 @@ class GraphAdjLinkedList {
   int get_index(int target);
 
   /* 打印链表 */
-  void prnt_linkedlist(Vertex *node);
+  void print_linkedlist(Vertex *node);
 
 public:
   /* 构造方法 */

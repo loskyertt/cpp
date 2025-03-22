@@ -2,7 +2,7 @@
 #include <climits>
 #include <vector>
 
-/* Floy 算法 */
+/* Floyd 算法 */
 vector<vector<int>> floyd(vector<vector<int>> adjMat) {
   int n = adjMat.size();
 

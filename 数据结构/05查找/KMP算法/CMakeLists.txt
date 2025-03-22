@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_COMPILER clang++)
 set(CMAKE_C_COMPILER clang)
 
-project(进制转换)
+project("KMP算法")
 
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -20,5 +20,5 @@ file(GLOB SRC
 #   "include"
 # )
 
-add_executable(test.out ${SRC})
-# target_include_directories(test.out PRIVATE ${INCLUDE_DIRS})
+add_executable(test ${SRC})
+# target_include_directories(test PRIVATE ${INCLUDE_DIRS})

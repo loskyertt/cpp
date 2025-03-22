@@ -55,7 +55,7 @@ int GraphAdjLinkedList::get_index(int target) {
 }
 
 /* 打印链表 */
-void GraphAdjLinkedList::prnt_linkedlist(Vertex *node) {
+void GraphAdjLinkedList::print_linkedlist(Vertex *node) {
   cout << "[ ";
   while (node) {
     cout << node->val << " -> ";
@@ -185,7 +185,7 @@ void GraphAdjLinkedList::print() {
   cout << "邻接表（链表实现）：" << endl;
   for (const auto adj : adjList) {
     cout << adj->val << " -> ";
-    prnt_linkedlist(adj->next);
+    print_linkedlist(adj->next);
   }
   cout << endl;
 }

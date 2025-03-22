@@ -59,14 +59,15 @@ PathInfo dijkstra(int start, vector<vector<int>> adjMat) {
   int n = adjMat.size();
 
   // 下面三个数组的索引与 vertices 的索引相对应
-  vector<int> distance(n, INT_MAX); // start （起点）到达每一个点的最短路径大小
-  vector<bool> visited(n, false);   // 顶点是否已经访问过
-  vector<int> path(n, -1);          // 路径：存放的是顶点的前一个节点
+  // vector<int> distance(n, INT_MAX); // start （起点）到达每一个点的最短路径大小
+  vector<int> distance(adjMat[start]); // start （起点）到达每一个点的最短路径大小
+  vector<bool> visited(n, false);      // 顶点是否已经访问过
+  vector<int> path(n, -1);             // 路径：存放的是顶点的前一个节点
 
   // 初始化起点
-  for (int i = 0; i < n; i++) {
-    distance[i] = adjMat[start][i];
-  }
+  // for (int i = 0; i < n; i++) {
+  //   distance[i] = adjMat[start][i];
+  // }
 
   visited[start] = true; // 在初始化 distance 的时候，vertices[0] 就访问过了
   distance[start] = 0;   // 可以不要，但是为了保证逻辑严密性，还是加上

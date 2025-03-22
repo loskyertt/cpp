@@ -5,7 +5,7 @@
 
 using namespace std;
 
-/* 交换二叉树的所有左、右子树，空的也要交换 */
+/* 交换二叉树的所有左、右子树，空的也要交换：递归实现 */
 void swap_left_and_right(TreeNode *root) {
   if (root == nullptr) {
     return;
@@ -20,6 +20,29 @@ void swap_left_and_right(TreeNode *root) {
 
   swap_left_and_right(root->left);
   swap_left_and_right(root->right);
+}
+
+/* 交换二叉树的所有左、右子树，空的也要交换：迭代实现 */
+void swap_left_and_right_iteration(TreeNode *root) {
+  if (!root) {
+    return;
+  }
+
+  queue<TreeNode *> q;
+  q.push(root);
+
+  while (!q.empty()) {
+    TreeNode *node = q.front();
+    q.pop();
+
+    swap(node->left, node->right);
+    if (node->left) {
+      q.push(node->left);
+    }
+    if (node->right) {
+      q.push(node->right);
+    }
+  }
 }
 
 /* BFS 打印二叉树 */

@@ -8,8 +8,11 @@ struct TreeNode {
   TreeNode(int x) : var(x), left(nullptr), right(nullptr) {}
 };
 
-/* 交换二叉树的所有左、右子树，空的也要交换 */
+/* 交换二叉树的所有左、右子树，空的也要交换：递归实现 */
 void swap_left_and_right(TreeNode *root);
+
+/* 交换二叉树的所有左、右子树，空的也要交换：迭代实现 */
+void swap_left_and_right_iteration(TreeNode *root);
 
 /* BFS 打印二叉树 */
 void bfs(TreeNode *root);

@@ -6,7 +6,8 @@
 
 using namespace std;
 
-void print_arr(vector<int> arr) {
+/* 打印数组 */
+void print_vector(vector<int> arr) {
   for (int val : arr) {
     cout << val << " ";
   }
@@ -18,32 +19,23 @@ void test() {
 
   ArrayBinaryTree tree(arr);
 
-  // cout << "实际占用数组大小：" << tree.size() << endl;
-  // cout << "索引为 2 的值：" << tree.val(2);
+  cout << "实际占用数组大小：" << tree.size() << endl;
 
-  // vector<int> pre_order_res = tree.pre_order();
-  // cout << "前序遍历为：";
-  // print_arr(pre_order_res);
-
-  // vector<int> in_order_res = tree.in_order();
-  // cout << "中序遍历为：";
-  // print_arr(in_order_res);
-
-  // vector<int> post_order = tree.post_order();
-  // cout << "后续遍历为：";
-  // print_arr(post_order);
-
-  vector<int> pre_order_res = tree.pre_order_iteration();
+  vector<int> pre_order_res = tree.pre_order();
   cout << "前序遍历为：";
-  print_arr(pre_order_res);
+  print_vector(pre_order_res);
 
-  // vector<int> in_order_res = tree.dfs_iteration();
-  // cout << "中序遍历为：";
-  // print_arr(in_order_res);
+  vector<int> in_order_res = tree.in_order();
+  cout << "中序遍历为：";
+  print_vector(in_order_res);
 
-  // vector<int> post_order = tree.dfs_iteration();
-  // cout << "后续遍历为：";
-  // print_arr(post_order);
+  vector<int> post_order = tree.post_order();
+  cout << "后续遍历为：";
+  print_vector(post_order);
+
+  vector<int> pre_order_res_iteration = tree.pre_order_iteration();
+  cout << "前序遍历为（迭代实现）：";
+  print_vector(pre_order_res_iteration);
 }
 
 int main() {

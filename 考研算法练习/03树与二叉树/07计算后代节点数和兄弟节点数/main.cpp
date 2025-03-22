@@ -69,9 +69,9 @@ void calculate_hd_iterative(TreeNode *root) {
 /* 统计当前节点右侧兄弟节点数（hx） */
 void calculate_hx(TreeNode *root) {
   int count = 0;
-  TreeNode *silbing = root->next_sibling;
-  while (silbing) {
-    silbing = silbing->next_sibling;
+  TreeNode *sibling = root->next_sibling;
+  while (sibling) {
+    sibling = sibling->next_sibling;
     count += 1;
   }
 
@@ -117,7 +117,7 @@ void bfs(TreeNode *root) {
   }
 }
 
-void test() {
+void test_01() {
   TreeNode *root = new TreeNode(1);
   root->first_child = new TreeNode(2);
   root->first_child->first_child = new TreeNode(3);
@@ -128,14 +128,29 @@ void test() {
 
   cout << "递归实现：" << endl;
   calculate_hd_recursion(root); // 计算hd
+  record_hx(root);              // 计算hx
+  bfs(root);
+}
 
-  // cout << "迭代实现：" << endl;
-  // calculate_hd_iterative(root);
-  record_hx(root); // 计算hx
+void test_02() {
+  TreeNode *root = new TreeNode(1);
+  root->first_child = new TreeNode(2);
+  root->first_child->first_child = new TreeNode(3);
+  root->first_child->next_sibling = new TreeNode(4);
+  root->first_child->first_child->next_sibling = new TreeNode(5);
+  root->first_child->next_sibling->next_sibling = new TreeNode(6);
+  root->first_child->next_sibling->first_child = new TreeNode(7);
+
+  cout << "迭代实现：" << endl;
+  calculate_hd_iterative(root); // 计算hd
+  record_hx(root);              // 计算hx
   bfs(root);
 }
 
 int main() {
-  test();
+  test_01();
+  cout << endl;
+  test_02();
+
   return 0;
 }
