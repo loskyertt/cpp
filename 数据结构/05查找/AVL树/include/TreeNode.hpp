@@ -17,7 +17,7 @@ int get_height(TreeNode *node);
 void update_height(TreeNode *node);
 
 /* 计算平衡因子 */
-int get_balanced_facotor(TreeNode *node);
+int get_balanced_factor(TreeNode *node);
 
 /* LL：右旋-旋转最右边的 */
 TreeNode *rotate_right(TreeNode *node);

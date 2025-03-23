@@ -38,7 +38,7 @@ void test_recursion() {
 }
 
 // 测试递归实现的
-void test_ieration() {
+void test_iteration() {
   vector<int> nums = {
       2,
       4,
@@ -71,7 +71,7 @@ void test_ieration() {
 
 int main() {
   test_recursion();
-  test_ieration();
+  test_iteration();
 
   return 0;
 }

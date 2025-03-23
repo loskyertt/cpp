@@ -17,7 +17,7 @@ void update_height(TreeNode *node) {
 }
 
 /* 计算平衡因子 */
-int get_balanced_facotor(TreeNode *node) {
+int get_balanced_factor(TreeNode *node) {
   if (node == nullptr) {
     return 0;
   }
@@ -57,12 +57,12 @@ TreeNode *rotate_left(TreeNode *node) {
 
 /* 旋转 */
 TreeNode *rotate(TreeNode *node) {
-  int balanced_factor = get_balanced_facotor(node);
+  int balanced_factor = get_balanced_factor(node);
 
   // L? 型
   if (balanced_factor > 1) {
     // LL 型，直接右旋
-    if (get_balanced_facotor(node->left) >= 0) {
+    if (get_balanced_factor(node->left) >= 0) {
       return rotate_right(node);
     }
     // LR 型，先左旋再右旋
@@ -75,7 +75,7 @@ TreeNode *rotate(TreeNode *node) {
   // R? 型
   if (balanced_factor < -1) {
     // RR 型，直接左旋
-    if (get_balanced_facotor(node->right) <= 0) {
+    if (get_balanced_factor(node->right) <= 0) {
       return rotate_left(node);
     }
     // RL 型，先右旋再左旋

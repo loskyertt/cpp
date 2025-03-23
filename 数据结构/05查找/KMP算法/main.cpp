@@ -16,7 +16,7 @@ vector<int> get_next(string &pattern) {
       j = next[j - 1]; // j 要跳回前一个匹配的最长前后缀长度所指的索引
     }
     if (pattern[j] == pattern[i]) {
-      j++; // 回溯
+      j++; // 回退
     }
 
     next[i] = j; // 找到匹配的前缀
@@ -27,13 +27,13 @@ vector<int> get_next(string &pattern) {
 
 /* KMP 算法实现 */
 int kmp(vector<int> &next, string match, string pattern) {
-  int j = 0; // patter 的指针
+  int j = 0; // pattern 的指针
 
   // i 是 match 的指针，永不回退
   for (int i = 0; i < match.size(); i++) {
 
     while (j > 0 && match[i] != pattern[j]) {
-      j = next[j - 1]; // // 失配的话，就回溯
+      j = next[j - 1]; // 失配的话，就回退
     }
 
     if (match[i] == pattern[j]) {

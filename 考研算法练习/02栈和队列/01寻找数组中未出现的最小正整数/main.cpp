@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <climits>
 #include <cstdlib>
 #include <iostream>
 #include <unordered_set>
@@ -52,11 +54,42 @@ int find_missing_positive_Situ(vector<int> nums) {
   return n + 1; // 所有抽屉都被标记，返回 n+1
 }
 
-void test() {
-  vector<int> arr = {-5, 3, 2, 3};
+/* 计数排序实现 */
+int find_missing_positive_count_sort(vector<int> nums) {
+  // 找出数组中的最大值
+  int max_val = INT_MIN;
+  for (int num : nums) {
+    max_val = max(max_val, num);
+  }
 
-  // cout << "最小未出现的正整数：" << find_missing_positive(arr) << endl;
-  cout << "最小未出现的正整数：" << find_missing_positive_Situ(arr) << endl;
+  // 以这个最大值作为计数数组的大小
+  vector<int> count(max_val, 0);
+
+  // 再次遍历原数组 nums，如果由这个元素，就在这个元素的对应 count 数组的下标 +1
+  for (int num : nums) {
+    if (num > 0) {
+      count[num - 1]++;
+    }
+  }
+
+  for (int i = 0; i < max_val; i++) {
+    // 如果为 0，说明这个就是未出现的最小正整数
+    if (count[i] == 0) {
+      return i + 1;
+    }
+  }
+
+  // 如果遍历完全部的 count 数组，说明最大值就是 nums 数组中的 max_val+1
+  return max_val + 1;
+}
+
+void test() {
+  // vector<int> arr = {-5, 3, 2, 3};
+  vector<int> arr = {1, 2, 3, 4, -2, 0};
+
+  cout << "最小未出现的正整数（哈希表实现）：" << find_missing_positive(arr) << endl;
+  cout << "最小未出现的正整数（原地哈希实现）：" << find_missing_positive_Situ(arr) << endl;
+  cout << "最小未出现的正整数（计数排序实现）：" << find_missing_positive_count_sort(arr) << endl;
 }
 
 int main() {
