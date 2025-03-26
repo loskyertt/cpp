@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++)
 
-project("链表转换")
+project("获取链表倒数第k个节点")
 
 ## ------------------------------------------ basic-settings ----------------------------------------------
 
@@ -20,9 +20,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ## ------------------------------------------ files-settings ----------------------------------------------
 # 添加源文件
+file(GLOB SRC_DIR
+    main.cpp
+)
+
 
 add_executable(test
-    main.cpp
+    ${SRC_DIR}
 )
 
 # target_include_directories(test PUBLIC

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++)
 
-project("获得倒数第k节点")
+project("判断链表是否有环")
 
 ## ------------------------------------------ basic-settings ----------------------------------------------
 

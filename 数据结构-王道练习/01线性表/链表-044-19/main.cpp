@@ -1,7 +1,7 @@
 #include <climits>
-#include <cstdio>
 #include <cstdlib>
 #include <iostream>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -49,32 +49,31 @@ void free_linked_list(ListNode *node) {
   }
 }
 
-/* 去除重复节点，链表递增有序，按照前面顺序表去重的思路 */
+/* 去重节点 */
 void remove_duplicate(ListNode *head) {
-  ListNode *slow = head->next, *fast = slow->next;
-  while (fast) {
-    if (slow->val != fast->val) {
-      slow = slow->next;
-      slow->val = fast->val;
+  // 创建一个哈希表用于存储节点值
+  unordered_set<int> set_list;
+  ListNode *curr = head->next, *prev = head;
+
+  while (curr) {
+    // 如果在哈希表中找到了该节点的值，就进行去除
+    if (set_list.find(abs(curr->val)) != set_list.end()) {
+      ListNode *temp = curr;
+      curr = curr->next;
+      prev->next = curr;
+      delete temp;
+    } else {
+      set_list.insert(abs(curr->val));
+      prev = curr;
+      curr = curr->next;
     }
-
-    fast = fast->next;
-  }
-
-  // 删除 slow 后面的节点，因为 slow 指向的就是去重后的链表的最后一个节点
-  while (slow->next) {
-    ListNode *tmp = slow->next;
-    slow->next = tmp->next;
-    delete tmp;
   }
 }
 
-// 去除重复节点，链表递增有序
 void test_01() {
-  vector<int> nums = {7, 10, 21, 30, 42, 42, 42, 70, 70};
+  vector<int> nums = {21, -15, -15, -7, 15};
   ListNode *head = convert_linked_list(nums);
-
-  cout << "初始链表：";
+  cout << "初始链表为：";
   print_linked_list(head);
 
   cout << "去重后的链表：";
@@ -85,7 +84,6 @@ void test_01() {
 }
 
 int main() {
-
   test_01();
 
   return 0;
