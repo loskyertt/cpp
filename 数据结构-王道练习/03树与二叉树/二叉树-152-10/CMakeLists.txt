@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER clang)
 set(CMAKE_CXX_COMPILER clang++)
 
-project("二叉树遍历")
+project("找最近祖先")
 
 ## ------------------------------------------ basic-settings ----------------------------------------------
 
@@ -20,14 +20,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 ## ------------------------------------------ files-settings ----------------------------------------------
 # 添加源文件
-aux_source_directory(src SRC_SUB)
-aux_source_directory(. SRC_CUR)
+file(GLOB SRC_FIR
+    # "src/*.cpp"
+    "main.cpp"
+)
+
+# set(INCLUDE_DIR
+#     "include"
+# )
 
 add_executable(test
-    ${SRC_SUB}
-    ${SRC_CUR}
+    ${SRC_FIR}
 )
 
-target_include_directories(test PUBLIC
-    include
-)
+# target_include_directories(test PUBLIC
+#     ${INCLUDE_DIR}
+# )
