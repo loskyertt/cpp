@@ -1,9 +1,7 @@
 #include "graphAdjLinkedList.hpp"
 #include <algorithm>
 #include <iostream>
-#include <queue>
 #include <stdexcept>
-#include <vector>
 
 // private:
 /* 添加节点：把 n1 节点添加到 n0 链表后 */
@@ -68,11 +66,6 @@ void GraphAdjLinkedList::print_linkedlist(Vertex *node) {
 /* 构造方法 */
 GraphAdjLinkedList::GraphAdjLinkedList(const vector<int> vertices,
                                        const vector<vector<int>> &edges) {
-
-  // 初始化 outdegree 列表和 indegree 列表
-  outdegree.resize(vertices.size(), 0);
-  indegree.resize(vertices.size(), 0);
-
   for (int vertex : vertices) {
     add_vertex(vertex);
   }
@@ -82,19 +75,9 @@ GraphAdjLinkedList::GraphAdjLinkedList(const vector<int> vertices,
   }
 }
 
-/* 获取邻接表*/
-vector<Vertex *> GraphAdjLinkedList::get_adjList() {
+/* 获取图 */
+vector<Vertex *> GraphAdjLinkedList::get_graph() {
   return adjList;
-}
-
-/* 获取出度列表 */
-vector<int> GraphAdjLinkedList::get_outdegree() {
-  return outdegree;
-}
-
-/* 获取入度列表 */
-vector<int> GraphAdjLinkedList::get_indegree() {
-  return indegree;
 }
 
 /* 获取顶点数量 */
@@ -102,7 +85,7 @@ int GraphAdjLinkedList::size() {
   return vertices.size();
 }
 
-/* 添加边：有向图 */
+/* 添加边 */
 void GraphAdjLinkedList::add_edge(int src, int dist) {
   if (find(vertices.begin(), vertices.end(), src) == vertices.end() ||
       find(vertices.begin(), vertices.end(), dist) == vertices.end()) {
@@ -112,42 +95,30 @@ void GraphAdjLinkedList::add_edge(int src, int dist) {
   Vertex *vet_src = new Vertex(src);
   Vertex *vet_dist = new Vertex(dist);
 
-  int src_index = get_index(src);
-  outdegree[src_index]++;
-
-  int dist_index = get_index(dist);
-  indegree[dist_index]++;
-
   for (auto vet : adjList) {
     if (vet->val == src) {
       add_node(vet, vet_dist);
     }
-    // if (vet->val == dist) {
-    //   add_node(vet, vet_src);
-    // }
+    if (vet->val == dist) {
+      add_node(vet, vet_src);
+    }
   }
 }
 
-/* 删除边：有向图 */
+/* 删除边 */
 void GraphAdjLinkedList::remove_edge(int src, int dist) {
   if (find(vertices.begin(), vertices.end(), src) == vertices.end() ||
       find(vertices.begin(), vertices.end(), dist) == vertices.end()) {
     throw out_of_range("无效的边！");
   }
 
-  int src_index = get_index(src);
-  outdegree[src_index]--;
-
-  int dist_index = get_index(dist);
-  indegree[dist_index]--;
-
   for (auto vet : adjList) {
     if (vet->val == src) {
       remove_node(vet, dist);
     }
-    // if (vet->val == dist) {
-    //   remove_node(vet, src);
-    // }
+    if (vet->val == dist) {
+      remove_node(vet, src);
+    }
   }
 }
 
@@ -188,72 +159,4 @@ void GraphAdjLinkedList::print() {
     print_linkedlist(adj->next);
   }
   cout << endl;
-}
-
-/* 拓扑排序 */
-vector<int> GraphAdjLinkedList::topology_sort() {
-  vector<int> res;
-  queue<int> q;
-
-  // 把所有入度为 0 的顶点放到队列中
-  for (int i = 0; i < size(); i++) {
-    if (indegree[i] == 0) {
-      q.push(i);
-    }
-  }
-
-  while (!q.empty()) {
-    int index = q.front();
-    q.pop();
-    res.push_back(vertices[index]);
-
-    // 记录当前顶点连接的下一个顶点
-    Vertex *next_vertex = adjList[index]->next;
-    // 从下一个顶点开始
-    while (next_vertex) {
-      int next_index = get_index(next_vertex->val);
-      indegree[next_index]--;
-      if (indegree[next_index] == 0) {
-        q.push(next_index);
-      }
-      next_vertex = next_vertex->next;
-    }
-  }
-
-  return res;
-}
-
-/* 判断 src 到 dist 是否存在路径 */
-bool GraphAdjLinkedList::is_existed_path(int src, int dist) {
-  if (src == dist) {
-    return true;
-  }
-
-  // 获取起始点和终止点的索引
-  int src_index = get_index(src);
-  int dist_index = get_index(dist);
-
-  // cout << "src_index = " << src_index << "; " << "dist_index = " << dist_index << endl;
-  queue<int> q;
-  q.push(src_index);
-
-  while (!q.empty()) {
-    int index = q.front();
-    q.pop();
-
-    Vertex *next_vertex = adjList[index]->next;
-
-    while (next_vertex) {
-      int next_index = get_index(next_vertex->val);
-      // 表示找到这条路径了
-      if (next_index == dist_index) {
-        return true;
-      } else {
-        q.push(next_index);
-        next_vertex = next_vertex->next;
-      }
-    }
-  }
-
-  return false;
 }

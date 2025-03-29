@@ -19,12 +19,6 @@ class GraphAdjLinkedList {
   // 顶点列表
   vector<int> vertices;
 
-  // 出度列表
-  vector<int> outdegree;
-
-  // 入度列表
-  vector<int> indegree;
-
   /* 添加节点：把 n1 节点添加到 n0 链表后 */
   void add_node(Vertex *n0, Vertex *n1);
 
@@ -41,14 +35,8 @@ public:
   /* 构造方法 */
   GraphAdjLinkedList(const vector<int> vertices, const vector<vector<int>> &edges);
 
-  /* 获取邻接表*/
-  vector<Vertex *> get_adjList();
-
-  /* 获取出度列表 */
-  vector<int> get_outdegree();
-
-  /* 获取入度列表 */
-  vector<int> get_indegree();
+  /* 获取图 */
+  vector<Vertex *> get_graph();
 
   /* 获取顶点数量 */
   int size();
@@ -67,10 +55,4 @@ public:
 
   /* 打印邻接表 */
   void print();
-
-  /* 拓扑排序 */
-  vector<int> topology_sort();
-
-  /* 判断 src 到 dist 是否存在路径 */
-  bool is_existed_path(int src, int dist);
 };
