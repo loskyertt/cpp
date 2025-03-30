@@ -1,16 +1,15 @@
 #include "graphAdjMat.hpp"
 #include <climits>
-#include <functional>
 #include <iostream>
 #include <queue>
 #include <stdexcept>
 #include <vector>
 
-// private:
-/* 获取顶点索引 */
-int GraphAdjMat::get_index(int target) {
+// private
+// 获取顶点列表中元素索引
+int GraphAdjMat::get_index(char val) {
   for (int i = 0; i < size(); i++) {
-    if (vertices[i] == target) {
+    if (vertices[i] == val) {
       return i;
     }
   }
@@ -20,49 +19,44 @@ int GraphAdjMat::get_index(int target) {
 
 // public:
 /* 构造方法*/
-GraphAdjMat::GraphAdjMat(const vector<int> &vertices,
-                         const vector<vector<int>> &edges) {
-
-  // 初始化 degree 列表
+GraphAdjMat::GraphAdjMat(const vector<char> &vertices,
+                         const vector<vector<char>> &edges) {
   indegree.resize(vertices.size(), 0);
 
   // 添加顶点
-  for (int val : vertices) {
+  for (char val : vertices) {
     add_vertex(val);
   }
 
   // 添加边
-  for (const vector<int> &edge : edges) {
-    int src_index = get_index(edge[0]);
-    int dist_index = get_index(edge[1]);
-    add_edge(src_index, dist_index);
-    indegree[dist_index]++;
+  for (const auto &edge : edges) {
+    int src = get_index(edge[0]);
+    int dist = get_index(edge[1]);
+    add_edge(src, dist);
+    indegree[dist]++;
   }
 }
 
-/* 获得 indegree 列表 */
-vector<int> GraphAdjMat::get_indegree() {
-  return indegree;
-}
+/* 获得邻接矩阵 */
+vector<vector<int>> GraphAdjMat::get_adjMat() { return adjMat; }
+
+/* 获得入度列表 */
+vector<int> GraphAdjMat::get_indegree() { return indegree; }
 
 /* 获取顶点数量 */
-int GraphAdjMat::size() const {
-  return vertices.size();
-}
+int GraphAdjMat::size() const { return vertices.size(); }
 
 /* 添加顶点 */
-void GraphAdjMat::add_vertex(int val) {
+void GraphAdjMat::add_vertex(char val) {
 
   int n = size();
 
   vertices.push_back(val);
   adjMat.emplace_back(vector<int>(n, INT_MAX));
-
   int i = 0;
   for (auto &row : adjMat) { // 注意这里 row 前要加 &，因为 row 是一个拷贝，auto row : adjMat 不会修改原始的 adjMat
     row.push_back(INT_MAX);
-    row[i] = 0;
-    i++;
+    row[i++] = 0;
   }
 }
 
@@ -106,7 +100,7 @@ void GraphAdjMat::remove_edge(int i, int j) {
 /* 打印邻接矩阵 */
 void GraphAdjMat::print() {
   cout << "顶点：" << endl;
-  for (int vertex : vertices) {
+  for (auto vertex : vertices) {
     cout << vertex << " ";
   }
 
@@ -117,7 +111,7 @@ void GraphAdjMat::print() {
   for (auto row : adjMat) {
     for (auto val : row) {
       if (val == INT_MAX) {
-        cout << "∞" << " ";
+        cout << "∞ ";
       } else {
         cout << val << " ";
       }
@@ -127,13 +121,18 @@ void GraphAdjMat::print() {
   cout << endl;
 }
 
-/* 拓扑排序：bfs */
-vector<int> GraphAdjMat::topology_sort_bfs() {
+/* 拓扑排序 */
+vector<char> GraphAdjMat::topology_sort() {
+  vector<char> res;
   vector<int> indegree = this->indegree;
-  vector<int> res;
-
   queue<int> q;
-  // 把所有入度为 0 的顶点放到队列中
+
+  // cout << "func1: ";
+  // for (int val : indegree) {
+  //   cout << val << " ";
+  // }
+  // cout << endl;
+
   for (int i = 0; i < size(); i++) {
     if (indegree[i] == 0) {
       q.push(i);
@@ -143,14 +142,14 @@ vector<int> GraphAdjMat::topology_sort_bfs() {
   while (!q.empty()) {
     int index = q.front();
     q.pop();
+
     res.push_back(vertices[index]);
 
-    // 把 index 对应顶点（src 顶点）,i 对应的是 dist 顶点，因为访问过了，所以要让这些 dist 顶点的入度减一
-    for (int j = 0; j < size(); j++) {
-      if (adjMat[index][j] == 1) {
-        indegree[j]--;
-        if (indegree[j] == 0) {
-          q.push(j);
+    for (int i = 0; i < size(); i++) {
+      if (adjMat[index][i] == 1) {
+        indegree[i]--;
+        if (indegree[i] == 0) {
+          q.push(i);
         }
       }
     }
@@ -159,41 +158,54 @@ vector<int> GraphAdjMat::topology_sort_bfs() {
   return res;
 }
 
-/* 拓扑排序：dfs */
-vector<int> GraphAdjMat::topology_sort_dfs() {
+/* 判断是否存在唯一的拓扑序列 */
+bool GraphAdjMat::is_unique_Topology_seq() {
+
   vector<int> indegree = this->indegree;
-  vector<int> res;
-  // 标记访问过的节点，以处理有多个连通分量的情况
-  vector<bool> visited(size(), false);
 
-  // DFS辅助函数
-  function<void(int)> dfs = [&](int index) {
-    visited[index] = true;
-    res.push_back(vertices[index]);
+  // cout << "func2: ";
+  // for (int val : indegree) {
+  //   cout << val << " ";
+  // }
+  // cout << endl;
 
-    for (int j = 0; j < size(); j++) {
-      if (adjMat[index][j] == 1) {
-        indegree[j]--;
-        if (indegree[j] == 0 && !visited[j]) {
-          dfs(j);
+  queue<int> q;
+  int count = 0;
+  for (int i = 0; i < size(); i++) {
+    if (indegree[i] == 0) {
+      q.push(i);
+      count++;
+    }
+  }
+
+  // 如果有一个以上的入度为 0 的顶点，说明不止一种拓扑序列
+  if (count > 1) {
+    return false;
+  }
+
+  int visited_count = 0; // 记录已访问的顶点数
+
+  while (!q.empty()) {
+    int index = q.front();
+    q.pop();
+    visited_count++;
+
+    count = 0;
+    for (int i = 0; i < size(); i++) {
+      if (adjMat[index][i] == 1) {
+        indegree[i]--;
+        if (indegree[i] == 0) {
+          q.push(i);
+          count++;
         }
       }
     }
-  };
 
-  // 处理所有入度为0的节点
-  for (int i = 0; i < size(); i++) {
-    if (indegree[i] == 0 && !visited[i]) {
-      dfs(i);
+    if (count > 1) {
+      return false;
     }
   }
 
-  // 检查是否所有节点都被访问
-  if (res.size() != size()) {
-    // 图中存在环或不是所有节点都可达
-    // 可以返回空向量或抛出异常
-    throw out_of_range("图中存在环！");
-  }
-
-  return res;
+  // 检查是否访问了所有顶点（避免环的干扰）
+  return visited_count == size();
 }

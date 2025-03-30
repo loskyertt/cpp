@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 
-# set(CMAKE_C_COMPILER clang)
-# set(CMAKE_CXX_COMPILER clang++)
+set(CMAKE_C_COMPILER clang)
+set(CMAKE_CXX_COMPILER clang++)
 
-project("最小生成树")
+project("顶点问题")
 
 ## ------------------------------------------ basic-settings ----------------------------------------------
 
@@ -14,8 +14,8 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # C++20 标准
-set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 20)
 
 
 ## ------------------------------------------ files-settings ----------------------------------------------

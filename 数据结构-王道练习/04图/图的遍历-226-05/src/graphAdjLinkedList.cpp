@@ -193,16 +193,16 @@ vector<vector<int>> GraphAdjLinkedList::get_paths_bfs(int begin, int end) {
 
       // 如果找到终点
       if (next_index == end_index) {
-        vector<int> complete_path = curr_path;
+        vector<int> complete_path = curr_path; // 创建副本
         complete_path.push_back(end);
         paths.push_back(complete_path);
       }
       // 如果节点未访问过，加入新路径继续搜索
       else if (!curr_visited[next_index]) {
-        vector<bool> new_visited = curr_visited;
+        vector<bool> new_visited = curr_visited; // 创建副本
         new_visited[next_index] = true;
 
-        vector<int> new_path = curr_path;
+        vector<int> new_path = curr_path; // 创建副本
         new_path.push_back(next_val);
 
         q.push(make_tuple(next_index, new_path, new_visited));

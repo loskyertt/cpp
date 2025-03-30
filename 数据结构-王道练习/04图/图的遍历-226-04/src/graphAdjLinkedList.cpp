@@ -268,8 +268,12 @@ bool GraphAdjLinkedList::is_existed_path_bfs(int src, int dist) {
 
 /* 判断 src 到 dist 是否存在路径：dfs 实现 */
 bool GraphAdjLinkedList::is_existed_path_dfs(int src, int dist) {
-  // 辅助函数，带访问标记
-  function<bool(int, int, vector<bool> &)> dfs = [&](int current, int target, vector<bool> &visited) {
+  // 访问标记
+  vector<bool> visited(vertices.size(), false);
+
+  // lambda 辅助函数，dfs
+  // 值捕获：function<void(int)> dfs = [=](int index) { ... }; 对外部变量只读
+  function<bool(int, int)> dfs = [&](int current, int target) {
     // 找到目标节点
     if (current == target) {
       return true;
@@ -286,7 +290,7 @@ bool GraphAdjLinkedList::is_existed_path_dfs(int src, int dist) {
 
       // 如果节点未访问过，继续搜索
       if (!visited[next_index]) {
-        if (dfs(next_val, target, visited)) {
+        if (dfs(next_val, target)) {
           return true;
         }
       }
@@ -297,6 +301,14 @@ bool GraphAdjLinkedList::is_existed_path_dfs(int src, int dist) {
     return false;
   };
 
-  vector<bool> visited(vertices.size(), false);
-  return dfs(src, dist, visited);
+  return dfs(src, dist);
 }
+
+/*
+lambda 函数说明：
+[&] - 通过引用捕获所有外部变量（可读写）
+[=] - 通过值捕获所有外部变量（只读）
+[var1, &var2] - 通过值捕获 var1，通过引用捕获 var2
+[&, var1] - 除 var1 外都通过引用捕获，var1 通过值捕获
+[=, &var1] - 除 var1 外都通过值捕获，var1 通过引用捕获
+*/

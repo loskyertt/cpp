@@ -6,25 +6,28 @@ using namespace std;
 
 /* 邻接矩阵 */
 class GraphAdjMat {
-  vector<int> vertices;       // 顶点列表
+  vector<char> vertices;      // 顶点列表
   vector<vector<int>> adjMat; // 邻接矩阵，行列索引对应“顶点索引”
-  vector<int> indegree;       // 记录顶点的入度，indegree 中的索引对应 vertices 中的索引
+  vector<int> indegree;       // 顶点对应入度
 
-  /* 获取顶点索引 */
-  int get_index(int target);
+  // 获取顶点列表中元素索引
+  int get_index(char val);
 
 public:
   /* 构造方法*/
-  GraphAdjMat(const vector<int> &vertices, const vector<vector<int>> &edges);
+  GraphAdjMat(const vector<char> &vertices, const vector<vector<char>> &edges);
 
-  /* 获得 indegree 列表 */
+  /* 获得邻接矩阵 */
+  vector<vector<int>> get_adjMat();
+
+  /* 获得入度列表 */
   vector<int> get_indegree();
 
   /* 获取顶点数量 */
   int size() const;
 
   /* 添加顶点 */
-  void add_vertex(int val);
+  void add_vertex(char val);
 
   /* 删除顶点 */
   void remove_vertex(int index);
@@ -38,9 +41,9 @@ public:
   /* 打印邻接矩阵 */
   void print();
 
-  /* 拓扑排序：bfs */
-  vector<int> topology_sort_bfs();
+  /* 拓扑排序 */
+  vector<char> topology_sort();
 
-  /* 拓扑排序：dfs */
-  vector<int> topology_sort_dfs();
+  /* 判断是否存在唯一的拓扑序列 */
+  bool is_unique_Topology_seq();
 };

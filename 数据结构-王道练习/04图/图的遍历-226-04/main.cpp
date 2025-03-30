@@ -18,7 +18,7 @@ void test_01() {
   graph.print();
 
   cout << "bfs 实现：" << endl;
-  bool res = graph.is_existed_path_bfs(3, 4);
+  bool res = graph.is_existed_path_bfs(3, 1);
   if (res) {
     cout << "存在路径！" << endl;
   } else {
@@ -42,7 +42,7 @@ void test_02() {
   graph.print();
 
   cout << "dfs 实现：" << endl;
-  bool res = graph.is_existed_path_dfs(3, 4);
+  bool res = graph.is_existed_path_dfs(3, 1);
   if (res) {
     cout << "存在路径！" << endl;
   } else {

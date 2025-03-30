@@ -1,4 +1,5 @@
 #include "graphAdjLinkedList.hpp"
+#include <functional>
 #include <iostream>
 #include <stdexcept>
 #include <vector>
@@ -14,20 +15,6 @@ int get_index(int val, vector<int> &vertices) {
   }
 
   throw out_of_range("没有这个顶点！");
-}
-
-/* dfs 遍历 */
-void dfs(vector<Vertex *> &adjList, vector<bool> &visited, vector<int> &vertices, int index) {
-  visited[index] = true;
-
-  Vertex *vertex = adjList[index]->next;
-  while (vertex) {
-    int curr_index = get_index(vertex->val, vertices);
-    if (!visited[curr_index]) {
-      dfs(adjList, visited, vertices, curr_index);
-    }
-    vertex = vertex->next;
-  }
 }
 
 /* 判断无向图是否是树 */
@@ -51,8 +38,24 @@ bool is_tree(vector<Vertex *> &adjList, vector<int> &vertices) {
 
   // 条件二：检出图是否是连通的
   vector<bool> visited(n, false);
-  dfs(adjList, visited, vertices, 0);
 
+  // dfs 辅助函数（lambda 函数）
+  function<void(int)> dfs = [&](int index) {
+    visited[index] = true;
+    Vertex *next_vertex = adjList[index]->next;
+    while (next_vertex) {
+      int next_index = get_index(next_vertex->val, vertices);
+      // 如果没有访问过
+      if (!visited[next_index]) {
+        dfs(next_index);
+      }
+      next_vertex = next_vertex->next;
+    }
+  };
+
+  dfs(0);
+
+  // 如果出现还要未访问的节点，说明图不是连通的
   for (bool val : visited) {
     if (!val) {
       return false;
