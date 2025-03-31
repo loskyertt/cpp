@@ -35,6 +35,9 @@ public:
   /* 构造方法 */
   GraphAdjLinkedList(const vector<int> vertices, const vector<vector<int>> &edges);
 
+  /* 析构函数，释放申请的内存 */
+  ~GraphAdjLinkedList();
+
   /* 获取顶点数量 */
   int size();
 

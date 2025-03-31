@@ -75,6 +75,18 @@ GraphAdjLinkedList::GraphAdjLinkedList(const vector<int> vertices,
   }
 }
 
+GraphAdjLinkedList::~GraphAdjLinkedList() {
+  for (auto &vertex : adjList) {
+    while (vertex) {
+      Vertex *temp = vertex;
+      vertex = vertex->next;
+      delete temp;
+    }
+  }
+
+  adjList.clear();
+}
+
 /* 获取顶点数量 */
 int GraphAdjLinkedList::size() {
   return vertices.size();
