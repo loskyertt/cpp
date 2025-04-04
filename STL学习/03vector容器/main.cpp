@@ -102,6 +102,13 @@ void test_04() {
   if (v1.empty()) {
     cout << "v1 容器为空！" << endl;
   }
+
+  vector<int> v2 = {1, 2, 3, 4, 5, 6, 7, 8};
+  // cout << "v2 删除前 3 个：";
+  // v2.erase(v2.begin(), v2.begin() + 3);
+  cout << "v2 删除后 3 个：";
+  v2.erase(v2.end() - 3, v2.end());
+  print_vector(v2);
 }
 
 // 数据存取
@@ -130,7 +137,7 @@ int main() {
   test_01();
   // test_02();
   // test_03();
-  // test_04();
+  test_04();
   // test_05();
   // test_06();
 
