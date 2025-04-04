@@ -21,10 +21,10 @@ void test_01() {
   print_vector(v1);
 
   // 将 v1 中的元素拷贝给 v2
-  vector<int> v2(v1.begin(), v1.end());
+  vector<int> v2(v1.begin(), v1.begin() + 4);
   cout << "v2: ";
   print_vector(v2);
-  cout << "v2[4] = " << v2[4] << endl;
+  // cout << "v2[4] = " << v2[4] << endl;
 
   vector<vector<int>> mat = {{1, 2, 3},
                              {4, 5, 6},
@@ -127,12 +127,12 @@ void test_06() {
 }
 
 int main() {
-  // test_01();
+  test_01();
   // test_02();
   // test_03();
   // test_04();
   // test_05();
-  test_06();
+  // test_06();
 
   return 0;
 }

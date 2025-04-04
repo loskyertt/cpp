@@ -147,7 +147,7 @@ void test_enumerate() {
                   yellow,
                   gree,
                   blue,
-                  vilot };
+                  vplot };
 
   spectrum band;
   cout << band << endl;
@@ -182,8 +182,8 @@ int main() {
   // test_self_add();
   // test_vector();
   // test_unordered_map();
-  // test_enumerate();
-  test_addr();
+  test_enumerate();
+  // test_addr();
 
   return 0;
 }
