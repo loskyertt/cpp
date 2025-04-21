@@ -45,4 +45,13 @@ public:
 
   /* 前序遍历：迭代实现 */
   vector<int> pre_order_iteration();
+
+  /* 中序遍历：迭代实现 */
+  vector<int> in_order_iteration();
+
+  /* 后序遍历：迭代实现，方式一 */
+  vector<int> post_order_iteration_1();
+
+  /* 后序遍历：迭代实现，方式二 */
+  vector<int> post_order_iteration_2();
 };

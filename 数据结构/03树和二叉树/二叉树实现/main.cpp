@@ -36,6 +36,18 @@ void test() {
   vector<int> pre_order_res_iteration = tree.pre_order_iteration();
   cout << "前序遍历为（迭代实现）：";
   print_vector(pre_order_res_iteration);
+
+  vector<int> in_order_res_iteration = tree.in_order_iteration();
+  cout << "中序遍历为（迭代实现）：";
+  print_vector(in_order_res_iteration);
+
+  vector<int> post_order_res_iteration_1 = tree.post_order_iteration_1();
+  cout << "后序遍历为（迭代实现，方式一）：";
+  print_vector(post_order_res_iteration_1);
+
+  vector<int> post_order_res_iteration_2 = tree.post_order_iteration_2();
+  cout << "后序遍历为（迭代实现，方式一）：";
+  print_vector(post_order_res_iteration_2);
 }
 
 int main() {
